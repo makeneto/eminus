@@ -7,7 +7,8 @@
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: rgb(222, 251, 222);
+  background-color: #eef8ef;
+  color: #023535;
 }
 
 .profile {
@@ -26,19 +27,45 @@ body {
 }
 
 .sideNavBar {
+  padding: 1.5rem 1.5rem 1rem;
+}
+.sideNavBar, .sideNavBar nav {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem 1.5rem;
 }
-.sideNavBar a {
+.sideNavBar nav {
+  gap: 0.6rem;
+}
+.sideNavBar nav a {
+  color: #525252;
+  font-size: 0.88rem;
   border-radius: 10rem;
   padding: 0.5rem 1rem;
   transition: all 0.2s ease-out;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-.sideNavBar a:hover {
-  background-color: rgb(73, 255, 94);
+.sideNavBar nav a svg {
+  width: 1rem;
+  height: 1rem;
+}
+.sideNavBar nav a:hover, .sideNavBar nav a.active {
+  color: #023535;
+  background-color: #b0ff9b;
+}
+.sideNavBar nav a.active {
+  font-weight: 500;
+}
+
+.navLogo {
+  margin-bottom: 2rem;
+  margin-inline: 1rem;
+}
+.navLogo img {
+  width: auto;
+  height: 1.6rem;
 }
 
 .headerPage {
@@ -53,7 +80,7 @@ body {
 
 .layout {
   display: grid;
-  grid-template-columns: 14rem auto;
+  grid-template-columns: 12rem auto;
   grid-template-rows: 100vh;
 }
 
