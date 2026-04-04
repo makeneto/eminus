@@ -7,6 +7,60 @@
 
 body {
   font-family: "Inter", sans-serif;
+  background-color: rgb(222, 251, 222);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.profile p {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.profile img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.sideNavBar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+}
+.sideNavBar a {
+  border-radius: 10rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-out;
+}
+.sideNavBar a:hover {
+  background-color: rgb(73, 255, 94);
+}
+
+.headerPage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.headerPage h1 {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 14rem auto;
+  grid-template-rows: 100vh;
+}
+
+.pages {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 2rem 0 0 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

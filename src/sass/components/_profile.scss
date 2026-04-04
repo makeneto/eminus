@@ -1,0 +1,16 @@
+.profile {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      & p {
+            font-weight: 500;
+            font-size: .9rem;
+      }
+
+      & img {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+      }
+}
