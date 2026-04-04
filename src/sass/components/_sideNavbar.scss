@@ -1,0 +1,17 @@
+.sideNavBar {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      padding: 1rem 1.5rem;
+
+      & a {
+            border-radius: 10rem;
+            padding: .5rem 1rem;
+            transition: all .2s ease-out;
+            
+            &:hover{
+                  background-color: rgb(73, 255, 94);
+            }
+      }
+}
