@@ -1,0 +1,7 @@
+@use '../base/variables' as v;
+
+.dashLayout {
+      display: grid;
+      grid-template-columns: 18rem auto;
+      gap: v.$spacing;
+}

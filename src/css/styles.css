@@ -11,6 +11,180 @@ body {
   color: #023535;
 }
 
+button {
+  cursor: pointer;
+}
+
+.settingButton {
+  transition: all 0.2s ease-in;
+}
+.settingButton svg {
+  width: 1rem;
+}
+.settingButton:hover {
+  color: #056161;
+}
+
+.cardControls {
+  background-color: #eef8ef;
+  display: flex;
+  align-items: center;
+  padding-block: 1rem;
+  border-radius: 1rem;
+}
+.cardControls button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding-inline: 1.4rem;
+  transition: all 0.2s ease-in;
+}
+.cardControls button:hover {
+  color: #056161;
+}
+.cardControls button:not(:last-child) {
+  border-right: 0.1rem solid white;
+}
+.cardControls button svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+.cardControls button p {
+  font-size: 0.8rem;
+}
+
+.cardSection {
+  display: grid;
+  gap: 1rem;
+}
+
+.creditCard {
+  width: 100%;
+  max-width: 320px;
+  height: 180px;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  color: #fff;
+  background: #023535;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.creditCard::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  right: -30px;
+  bottom: -30px;
+}
+.creditCard .fingerSpace {
+  position: absolute;
+  width: 1.4rem;
+  height: 3rem;
+  background-color: white;
+  border-radius: 50%;
+  bottom: 15%;
+  right: -5%;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardHeader img {
+  width: 32px;
+}
+.cardHeader svg {
+  width: 22px;
+  opacity: 0.8;
+}
+
+.cardBody h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-right: 0.5rem;
+}
+.cardFooter span {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+.cardFooter h1 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  margin-top: 0.2rem;
+  line-height: 1rem;
+}
+
+.cardInfo {
+  display: flex;
+  gap: 1rem;
+  text-align: right;
+}
+.cardInfo p {
+  font-size: 0.74rem;
+  font-weight: 500;
+}
+
+.limitDaily {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border: 0.1rem solid #e2ebeb;
+  border-radius: 1rem;
+}
+.limitDaily h1 {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.limitDaily__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  display: grid;
+  gap: 1rem;
+}
+.content .text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .text p {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.content .text p span {
+  color: gray;
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+.content .progressBar {
+  width: 100%;
+  height: 0.3rem;
+  background-color: #9ae287;
+  border-radius: 1rem;
+}
+.content .progressBar div {
+  background-color: #023535;
+  height: 100%;
+  border-radius: 1rem;
+}
+
 .profile {
   display: flex;
   align-items: center;
@@ -68,10 +242,17 @@ body {
   height: 1.6rem;
 }
 
+.dashLayout {
+  display: grid;
+  grid-template-columns: 18rem auto;
+  gap: 1rem;
+}
+
 .headerPage {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 .headerPage h1 {
   font-weight: 600;
