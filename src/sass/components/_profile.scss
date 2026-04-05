@@ -1,7 +1,9 @@
+@use '../base/variables' as v;
+
 .profile {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: v.$spacing;
 
       & p {
             font-weight: 500;

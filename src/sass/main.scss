@@ -2,9 +2,16 @@
 @use './base/base';
 @use './base/typography';
 
+@use './components/ui/settingButton';
+
+@use './components/cardControls';
+@use './components/cardSection';
+@use './components/creditCard';
+@use './components/dailyLimit';
 @use './components/profile';
 @use './components/sideNavbar';
 
+@use './layouts/dashLayout';
 @use './layouts/header';
 @use './layouts/layout';
 @use './layouts/pages';
