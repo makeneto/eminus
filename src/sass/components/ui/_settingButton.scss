@@ -2,10 +2,6 @@
 
 .settingButton {
       transition: all .2s ease-in;
-      
-      & svg {
-            width: 1rem;
-      }
 
       &:hover {
             color: v.$hovered-dark-green;

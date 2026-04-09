@@ -1,10 +1,13 @@
-import CardControls from "../cardSection/CardSection"
+import CardSection from "../cardSection/CardSection"
+import DashSummary from "../dashboard/DashSummary"
 
 export default function DashBoardLayout() {
   return (
     <main className="dashLayout">
-      <CardControls />
-      <main className="dashLayout__content">Content</main>
+      <CardSection />
+      <main className="dashLayout__content">
+        <DashSummary />
+      </main>
     </main>
   )
 }

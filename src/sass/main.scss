@@ -2,12 +2,16 @@
 @use './base/base';
 @use './base/typography';
 
+@use './components/ui/badge';
+@use './components/ui/buttons';
+@use './components/ui/frame';
 @use './components/ui/settingButton';
 
 @use './components/cardControls';
 @use './components/cardSection';
 @use './components/creditCard';
 @use './components/dailyLimit';
+@use './components/dashboard';
 @use './components/profile';
 @use './components/sideNavbar';
 

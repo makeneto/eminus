@@ -1,0 +1,15 @@
+@use '../base/variables' as v;
+
+.dashboard {
+      &__summary {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+
+            &--icon {
+                  padding: .5rem;
+                  background-color: v.$light-green;
+                  border-radius: .4rem;
+            }
+      }
+}
