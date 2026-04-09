@@ -4,4 +4,11 @@
       display: grid;
       grid-template-columns: 18rem auto;
       gap: v.$spacing;
+      overflow: hidden;
+      height: 100%;
+}
+
+.dashLayout__content {
+      overflow-y: auto;
+      height: 100%;
 }

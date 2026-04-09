@@ -2,5 +2,12 @@
       display: grid;
       grid-template-columns: 12rem auto;
       grid-template-rows: 100vh;
+      height: 100vh;
+      overflow: hidden;
+}
+
+.pages {
+      overflow-y: auto;
+      height: 100%;
 }
 

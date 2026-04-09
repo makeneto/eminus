@@ -1,0 +1,22 @@
+
+@use '../../base/variables' as v;
+
+.btn {
+      &--primary {
+            display: flex;
+            align-items: center;
+            gap: .2rem;
+            font-size: .72rem;
+            color: v.$hovered-dark-green;
+            transition: color .2s ease-in;
+
+            & svg {
+                  width: .78rem;
+                  height: .78rem;
+            }
+
+            &:hover {
+                  color: v.$dark-green;
+            }
+      }
+}

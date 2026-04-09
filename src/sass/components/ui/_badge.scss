@@ -1,0 +1,9 @@
+.badge {
+      width: fit-content;
+      
+      &--sm {
+            border-radius: 3rem;
+            padding: .1rem .45rem;
+            font-size: .6rem;
+      }
+}
