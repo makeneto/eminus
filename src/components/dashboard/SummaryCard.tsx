@@ -3,7 +3,6 @@ import Frame from "../ui/Frame"
 import SettingButton from "../ui/SettingButton"
 
 interface SummaryCardProps {
-  type: "income" | "expense" | "balance" | "days"
   icon: React.ReactNode
   percent?: number
   amount?: number
@@ -12,7 +11,6 @@ interface SummaryCardProps {
 }
 
 export default function SummaryCard({
-  type,
   icon,
   percent,
   amount,
