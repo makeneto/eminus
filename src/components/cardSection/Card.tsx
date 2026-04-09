@@ -18,7 +18,7 @@ export default function Card() {
       <div className="cardFooter">
         <div>
           <span>Balance Amount</span>
-          <h1><span>AOA</span> 1.500.000,00</h1>
+          <h1><span>AOA</span> 1 500 000</h1>
         </div>
 
         <div className="cardInfo">
