@@ -1,6 +1,6 @@
 interface FrameHeaderProps {
   title: string
-  children: React.ReactNode
+  children?: React.ReactNode
 }
 
 export default function FrameHeader({ title, children }: FrameHeaderProps) {

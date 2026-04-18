@@ -45,7 +45,7 @@ button {
   gap: 1rem;
   border: 0.1rem solid #e2ebeb;
   border-radius: 1rem;
-  padding: 1rem;
+  padding: 0.97rem;
 }
 .frame--header {
   display: flex;
@@ -95,7 +95,7 @@ button {
 
 .cardSection {
   display: grid;
-  gap: 1rem;
+  gap: 0.98rem;
   overflow-y: auto;
   height: 100%;
 }
@@ -178,7 +178,7 @@ button {
 
 .cardInfo {
   display: flex;
-  gap: 1rem;
+  gap: 0.98rem;
   text-align: right;
 }
 .cardInfo p {
@@ -188,7 +188,7 @@ button {
 
 .content {
   display: grid;
-  gap: 1rem;
+  gap: 0.7rem;
 }
 .content .text {
   display: flex;
@@ -219,8 +219,9 @@ button {
 
 .dashboard__summary {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.98rem;
+  margin-bottom: 0.98rem;
 }
 .dashboard__summary--icon {
   padding: 0.5rem;
@@ -231,7 +232,7 @@ button {
 .profile {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.98rem;
 }
 .profile p {
   font-weight: 500;
@@ -287,8 +288,8 @@ button {
 
 .dashLayout {
   display: grid;
-  grid-template-columns: 18rem auto;
-  gap: 1rem;
+  grid-template-columns: 18rem auto 15rem;
+  gap: 0.98rem;
   overflow: hidden;
   height: 100%;
 }

@@ -1,4 +1,5 @@
 import CardSection from "../cardSection/CardSection"
+import DashCashFlow from "../dashboard/DashCashflow"
 import DashSummary from "../dashboard/DashSummary"
 
 export default function DashBoardLayout() {
@@ -7,6 +8,7 @@ export default function DashBoardLayout() {
       <CardSection />
       <main className="dashLayout__content">
         <DashSummary />
+        <DashCashFlow />
       </main>
     </main>
   )

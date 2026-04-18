@@ -6,7 +6,6 @@ interface SummaryCardProps {
   icon: React.ReactNode
   percent?: number
   amount?: number
-  days?: number
   title: string
 }
 
@@ -14,7 +13,6 @@ export default function SummaryCard({
   icon,
   percent,
   amount,
-  days,
   title,
 }: SummaryCardProps) {
   return (
@@ -45,10 +43,7 @@ export default function SummaryCard({
         ) : null}
 
         {amount !== undefined ? (
-          <h1 className="font-bold">{amount.toLocaleString()} kz</h1>
-        ) : null}
-        {days !== undefined ? (
-          <p className="text-lg font-bold">{days} days</p>
+          <h1 className="font-bold text-sm">{amount.toLocaleString()} kz</h1>
         ) : null}
 
         <p className="text-xs text-gray-500">{title}</p>
