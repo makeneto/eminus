@@ -1,5 +1,5 @@
 import CardSection from "../cardSection/CardSection"
-import DashCashFlow from "../dashboard/DashCashflow"
+import DashCashFlow from "../dashboard/CashflowSum"
 import DashSummary from "../dashboard/DashSummary"
 
 export default function DashBoardLayout() {

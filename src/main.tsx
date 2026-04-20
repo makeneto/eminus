@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom"
 import "./css/index.css"
 import "./css/styles.css"
 import App from "./App.tsx"
-import SideNavBar from "./components/SideNavbar/SideNavBar.tsx"
+import SideNavBar from "./components/sideNavbar/SideNavBar.tsx"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
