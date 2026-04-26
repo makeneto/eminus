@@ -10,6 +10,7 @@ import {
   ChartTooltipContent,
   type ChartConfig,
 } from "@/components/ui/chart"
+import ChartPieDonutList from "./ChartPieDonutList"
 
 const chartData = [
   { name: "Rent & Living", value: 475000, fill: "var(--chart-1)" },
@@ -44,7 +45,6 @@ export function ChartPieDonutText() {
 
   return (
     <CardContent className="grid md:flex-row items-center gap-4">
-      {/* CHART */}
       <ChartContainer
         config={chartConfig}
         className="w-full aspect-square min-w-[200px] min-h-[200px]"
@@ -91,31 +91,7 @@ export function ChartPieDonutText() {
         </PieChart>
       </ChartContainer>
 
-      {/* LISTA IGUAL À IMAGEM */}
-      <div className="grid gap-5 w-full space-y-3">
-        {sortedData.map((item) => {
-          const percent = ((item.value / total) * 100).toFixed(0)
-
-          return (
-            <div key={item.name} className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div
-                  className={`flex h-7.5 w-11 items-center justify-center rounded-lg text-xs font-semibold ${item.name === "Education" || item.name === "Investments" ? "text-white" : ""}`}
-                  style={{ backgroundColor: item.fill }}
-                >
-                  {percent}%
-                </div>
-
-                <span className="text-sm ">{item.name}</span>
-              </div>
-
-              <span className="text-sm font-medium">
-                {item.value.toLocaleString()} Kz
-              </span>
-            </div>
-          )
-        })}
-      </div>
+      <ChartPieDonutList sortedData={sortedData} total={total} />
     </CardContent>
   )
 }

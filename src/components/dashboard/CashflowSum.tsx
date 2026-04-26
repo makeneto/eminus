@@ -1,13 +1,13 @@
 import Frame from "../ui/Frame"
 import FrameHeader from "../ui/FrameHeader"
-import SelectYear from "../ui/SelectYear"
+import SelectTime from "../ui/SelectTime"
 import { ChartBarStacked } from "./CashflowChart"
 
 export default function DashCashFlow() {
   return (
     <Frame>
       <FrameHeader title="Cashflow">
-        <SelectYear />
+        <SelectTime group={["This Year", "Last Year", "2024", "2023"]} />
       </FrameHeader>
       <ChartBarStacked />
     </Frame>

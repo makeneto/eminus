@@ -7,17 +7,19 @@ import {
   SelectValue,
 } from "./select"
 
-export default function SelectYear() {
+export default function SelectTime({ group }: { group: string[] }) {
   return (
     <Select>
       <SelectTrigger className="w-44">
-        <SelectValue placeholder="Theme" />
+        <SelectValue placeholder={group[0]} />
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          <SelectItem value="light">Light</SelectItem>
-          <SelectItem value="dark">Dark</SelectItem>
-          <SelectItem value="system">System</SelectItem>
+          {group.map((item) => (
+            <SelectItem key={item} value={item}>
+              {item}
+            </SelectItem>
+          ))}
         </SelectGroup>
       </SelectContent>
     </Select>
