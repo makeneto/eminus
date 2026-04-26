@@ -1,6 +1,5 @@
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 
-import { CardContent } from "@/components/ui/card"
 import {
   ChartContainer,
   ChartLegend,
@@ -9,8 +8,6 @@ import {
   ChartTooltipContent,
   type ChartConfig,
 } from "@/components/ui/chart"
-
-export const description = "A stacked bar chart with a legend"
 
 const chartData = [
   { month: "January", income: 186, expense: 80 },
@@ -33,40 +30,41 @@ const chartConfig = {
 } satisfies ChartConfig
 
 export function ChartBarStacked() {
+  const amount = 761450
+
   return (
     <div className="grid gap-4">
       <header>
-        <span className="text-gray-500 text-xs">Total Balance</span>
-        <h1 className="font-bold text-[1.1rem]">950 000 kz</h1>
+        <span className="text-gray-500 text-sm">Total Balance</span>
+        <h1 className="font-bold text-xl">{amount.toLocaleString()} kz</h1>
       </header>
-      <CardContent>
-        <ChartContainer config={chartConfig}>
-          <BarChart accessibilityLayer data={chartData}>
-            <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="month"
-              tickLine={false}
-              tickMargin={10}
-              axisLine={false}
-              tickFormatter={(value) => value.slice(0, 3)}
-            />
-            <ChartTooltip content={<ChartTooltipContent hideLabel />} />
-            <ChartLegend content={<ChartLegendContent />} />
-            <Bar
-              dataKey="income"
-              stackId="a"
-              fill="var(--color-income)"
-              radius={[0, 0, 4, 4]}
-            />
-            <Bar
-              dataKey="expense"
-              stackId="a"
-              fill="var(--color-expense)"
-              radius={[4, 4, 0, 0]}
-            />
-          </BarChart>
-        </ChartContainer>
-      </CardContent>
+      <ChartContainer config={chartConfig} className="w-full h-[220px]">
+        <BarChart accessibilityLayer data={chartData}>
+          <CartesianGrid vertical={true} />
+          <XAxis
+            dataKey="month"
+            tickLine={false}
+            tickMargin={10}
+            axisLine={false}
+            tickFormatter={(value) => value.slice(0, 3)}
+          />
+          <ChartTooltip content={<ChartTooltipContent hideLabel />} />
+          <ChartLegend content={<ChartLegendContent />} />
+          <Bar
+            dataKey="income"
+            stackId="a"
+            fill="var(--color-income)"
+            radius={[0, 0, 4, 4]}
+          />
+          <Bar
+            dataKey="expense"
+            stackId="a"
+            fill="var(--color-expense)"
+            radius={[4, 4, 0, 0]}
+            barSize={32}
+          />
+        </BarChart>
+      </ChartContainer>
     </div>
   )
 }

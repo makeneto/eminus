@@ -69,9 +69,9 @@
     --ring: oklch(0.708 0 0);
     --chart-1: #9ae287;
     --chart-2: #023535;
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
+    --chart-3: #666b67;
+    --chart-4: #cccccc;
+    --chart-5: #eef8ef;
     --radius: 0.625rem;
     --sidebar: oklch(0.985 0 0);
     --sidebar-foreground: oklch(0.145 0 0);

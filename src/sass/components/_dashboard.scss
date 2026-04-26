@@ -3,7 +3,7 @@
 .dashboard {
       &__summary {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(6, 1fr);
             gap: v.$spacing;
             margin-bottom: v.$spacing;
 

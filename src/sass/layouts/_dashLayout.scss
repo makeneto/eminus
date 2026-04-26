@@ -2,13 +2,18 @@
 
 .dashLayout {
       display: grid;
-      grid-template-columns: 18rem auto 15rem;
+      grid-template-columns: 18rem auto 21rem;
       gap: v.$spacing;
       overflow: hidden;
       height: 100%;
 }
 
 .dashLayout__content {
-      overflow-y: auto;
       height: 100%;
+      overflow-y: auto;
+}
+
+.main-grid {
+      display: grid;
+      gap: v.$spacing;
 }

@@ -1,0 +1,103 @@
+.recent-transactions {
+      .table-wrapper {
+            overflow-x: auto;
+      }
+
+      table {
+            width: 100%;
+            font-size: 0.875rem;
+            border-collapse: collapse;
+
+            thead {
+                  tr {
+                        text-align: left;
+                        color: #6b7280;
+                        background: #ecfdf5;
+                        border-bottom: 1px solid #e5e7eb;
+
+                        th {
+                              font-weight: normal;
+                              padding: 0.75rem 1rem;
+                        }
+                  }
+            }
+
+            tbody {
+                  tr {
+                        border-bottom: 1px solid #e5e7eb;
+                        transition: background 0.2s ease;
+
+                        &:last-child {
+                              border-bottom: none;
+                        }
+
+                        &:hover {
+                              background: #f9fafb;
+                        }
+
+                        td {
+                              padding: 1rem;
+                        }
+
+                        .name {
+                              p:first-child {
+                                    font-weight: 500;
+                                    color: #1f2937;
+                              }
+
+                              p:last-child {
+                                    font-size: 0.75rem;
+                                    color: #9ca3af;
+                              }
+                        }
+
+                        .date {
+                              color: #4b5563;
+
+                              p:last-child {
+                                    font-size: 0.75rem;
+                                    color: #9ca3af;
+                              }
+                        }
+
+                        .amount {
+                              font-weight: 500;
+                              color: #1f2937;
+                        }
+
+                        .note {
+                              color: #6b7280;
+                        }
+
+                        .status {
+                              span {
+                                    padding: 0.25rem 0.75rem;
+                                    font-size: 0.75rem;
+                                    border-radius: 9999px;
+                                    font-weight: 500;
+                              }
+
+                              &.failed span {
+                                    background: #fee2e2;
+                                    color: #dc2626;
+                              }
+
+                              &.completed span {
+                                    background: #dcfce7;
+                                    color: #16a34a;
+                              }
+
+                              &.pending span {
+                                    background: #fef9c3;
+                                    color: #ca8a04;
+                              }
+
+                              &.default span {
+                                    background: #f3f4f6;
+                                    color: #4b5563;
+                              }
+                        }
+                  }
+            }
+      }
+}

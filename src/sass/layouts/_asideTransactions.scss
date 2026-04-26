@@ -1,0 +1,7 @@
+@use '../base/variables' as v;
+
+.aside-transaction {
+      display: flex;
+      flex-direction: column;
+      gap: v.$spacing;
+}

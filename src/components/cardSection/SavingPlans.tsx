@@ -19,6 +19,8 @@ export default function SavingPlans() {
       </div>
 
       <SinglePlan />
+      <SinglePlan />
+      <SinglePlan />
     </Frame>
   )
 }

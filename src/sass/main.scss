@@ -6,6 +6,7 @@
 @use './components/ui/buttons';
 @use './components/ui/frame';
 @use './components/ui/settingButton';
+@use './components/ui/table';
 
 @use './components/cardControls';
 @use './components/cardSection';
@@ -15,6 +16,7 @@
 @use './components/profile';
 @use './components/sideNavbar';
 
+@use './layouts/asideTransactions';
 @use './layouts/dashLayout';
 @use './layouts/header';
 @use './layouts/layout';

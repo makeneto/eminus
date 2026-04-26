@@ -10,7 +10,7 @@ import {
 export default function SelectYear() {
   return (
     <Select>
-      <SelectTrigger className="w-[180px]">
+      <SelectTrigger className="w-44">
         <SelectValue placeholder="Theme" />
       </SelectTrigger>
       <SelectContent>

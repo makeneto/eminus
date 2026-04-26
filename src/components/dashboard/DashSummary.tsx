@@ -1,8 +1,4 @@
-import {
-  BanknoteArrowDown,
-  BanknoteArrowUp,
-  Landmark,
-} from "lucide-react"
+import { BanknoteArrowDown, BanknoteArrowUp, Landmark } from "lucide-react"
 import SummaryCard from "./SummaryCard"
 
 export default function DashSummary() {
@@ -19,6 +15,24 @@ export default function DashSummary() {
         percent={-1.78}
         amount={117000}
         title="Total Expenses"
+      />
+      <SummaryCard
+        icon={<Landmark size={19} />}
+        percent={18}
+        amount={180000}
+        title="Saldo Positivo"
+      />
+      <SummaryCard
+        icon={<Landmark size={19} />}
+        percent={18}
+        amount={180000}
+        title="Saldo Positivo"
+      />
+      <SummaryCard
+        icon={<Landmark size={19} />}
+        percent={18}
+        amount={180000}
+        title="Saldo Positivo"
       />
       <SummaryCard
         icon={<Landmark size={19} />}
