@@ -60,7 +60,7 @@ export default function RecentTransactionTable() {
           />
         </FrameHeader>
 
-        <div className="table-wrapper flex-1 overflow-auto">
+        <div className="table-wrapper no-scroll-bar flex-1 overflow-auto">
           <table>
             <thead>
               <tr>

@@ -44,9 +44,8 @@ const activities = [
 export function RecentActivity() {
   return (
     <div className="w-full max-w-md p-3">
-      {/* Content */}
       <div
-        className="grid gap-6 space-y-5 overflow-y-auto"
+        className="grid gap-6 space-y-5 overflow-y-auto no-scroll-bar"
         style={{ maxHeight: "10rem" }}
       >
         {activities.map((group) => (

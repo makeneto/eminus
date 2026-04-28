@@ -21,3 +21,5 @@
 @use './layouts/header';
 @use './layouts/layout';
 @use './layouts/pages';
+
+@use './utils/no-scrollBar';
