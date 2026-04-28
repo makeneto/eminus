@@ -6,7 +6,7 @@ export default function SinglePlan() {
   return (
     <Frame>
       <div className="flex justify-between items-center">
-        <p className="text-xs">Vacation</p>
+        <p className="text-sm font-medium">Vacation</p>
         <SettingButton />
       </div>
 

@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Inter", sans-serif;
   background-color: #eef8ef;
@@ -41,7 +35,8 @@ button {
 }
 
 .frame {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   border: 0.1rem solid #e2ebeb;
   border-radius: 1rem;
@@ -64,6 +59,11 @@ button {
   color: #056161;
 }
 
+.recent-transactions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 .recent-transactions .table-wrapper {
   overflow-x: auto;
 }
@@ -312,7 +312,7 @@ button {
   gap: 0.98rem;
 }
 .profile p {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.9rem;
 }
 .profile img {
@@ -384,6 +384,7 @@ button {
 
 .main-grid {
   display: grid;
+  grid-template-rows: 23rem auto;
   gap: 0.98rem;
 }
 

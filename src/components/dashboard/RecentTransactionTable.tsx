@@ -31,18 +31,36 @@ export default function RecentTransactionTable() {
       note: "Tickets for movies and snacks",
       status: "Pending",
     },
+    {
+      name: "Movie Night",
+      category: "Entertainment",
+      date: "2026-02-27",
+      time: "04:28:48",
+      amount: 9784,
+      note: "Tickets for movies and snacks",
+      status: "Pending",
+    },
+    {
+      name: "Movie Night",
+      category: "Entertainment",
+      date: "2026-02-27",
+      time: "04:28:48",
+      amount: 9784,
+      note: "Tickets for movies and snacks",
+      status: "Pending",
+    },
   ]
 
   return (
     <Frame>
-      <div className="recent-transactions grid gap-5">
+      <div className="recent-transactions h-[20rem] flex flex-col">
         <FrameHeader title="Recent Transactions">
           <SelectTime
             group={["This Month", "Last Month", "February", "January"]}
           />
         </FrameHeader>
 
-        <div className="table-wrapper">
+        <div className="table-wrapper flex-1 overflow-auto">
           <table>
             <thead>
               <tr>

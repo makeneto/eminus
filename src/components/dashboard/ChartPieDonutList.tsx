@@ -5,7 +5,7 @@ interface DataItem {
 
 export default function ChartPieDonutList({ sortedData, total }: DataItem) {
   return (
-    <div className="grid gap-5 w-full space-y-3">
+    <div className="grid gap-2 w-full space-y-3">
       {sortedData.map((item) => {
         const percent = ((item.value / total) * 100).toFixed(0)
 

@@ -6,10 +6,12 @@ import { ChartBarStacked } from "./CashflowChart"
 export default function DashCashFlow() {
   return (
     <Frame>
-      <FrameHeader title="Cashflow">
-        <SelectTime group={["This Year", "Last Year", "2024", "2023"]} />
-      </FrameHeader>
-      <ChartBarStacked />
+      <div className="h-[20rem]">
+        <FrameHeader title="Cashflow">
+          <SelectTime group={["This Year", "Last Year", "2024", "2023"]} />
+        </FrameHeader>
+        <ChartBarStacked />
+      </div>
     </Frame>
   )
 }

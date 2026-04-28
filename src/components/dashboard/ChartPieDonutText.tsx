@@ -1,5 +1,3 @@
-"use client"
-
 import * as React from "react"
 import { Label, Pie, PieChart } from "recharts"
 
@@ -20,7 +18,6 @@ const chartData = [
   { name: "Entertainment", value: 190000, fill: "var(--chart-5)" },
 ]
 
-// ✅ CONFIG OBRIGATÓRIO (corrige o crash)
 const chartConfig = {
   value: {
     label: "Expenses",
@@ -59,7 +56,7 @@ export function ChartPieDonutText() {
             data={sortedData}
             dataKey="value"
             nameKey="name"
-            innerRadius="60%"
+            innerRadius="61%"
             strokeWidth={8}
             paddingAngle={3}
           >
@@ -73,7 +70,7 @@ export function ChartPieDonutText() {
                     textAnchor="middle"
                     dominantBaseline="middle"
                   >
-                    <tspan className="text-2xl font-bold fill-foreground">
+                    <tspan className="text-2xl font-bold">
                       {total.toLocaleString()}
                     </tspan>
                     <tspan

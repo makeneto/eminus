@@ -7,12 +7,14 @@ import { Route, Routes } from "react-router-dom"
 
 export default function App() {
   return (
-    <Routes>
-      <Route index element={<Dashboard />} />
-      <Route path="/payments" element={<Payments />} />
-      <Route path="/transactions" element={<Transactions />} />
-      <Route path="/plans" element={<Plans />} />
-      <Route path="/investments" element={<Investments />} />
-    </Routes>
+    <div className="flex flex-col">
+      <Routes>
+        <Route index element={<Dashboard />} />
+        <Route path="/payments" element={<Payments />} />
+        <Route path="/transactions" element={<Transactions />} />
+        <Route path="/plans" element={<Plans />} />
+        <Route path="/investments" element={<Investments />} />
+      </Routes>
+    </div>
   )
 }

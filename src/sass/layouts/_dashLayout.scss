@@ -15,5 +15,6 @@
 
 .main-grid {
       display: grid;
+      grid-template-rows: 23rem auto;
       gap: v.$spacing;
 }

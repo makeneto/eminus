@@ -33,7 +33,7 @@ export function ChartBarStacked() {
   const amount = 761450
 
   return (
-    <div className="grid gap-4">
+    <div className="pt-4.5 grid gap-4">
       <header>
         <span className="text-gray-500 text-sm">Total Balance</span>
         <h1 className="font-bold text-xl">{amount.toLocaleString()} kz</h1>
