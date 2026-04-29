@@ -3,7 +3,7 @@ import FrameHeader from "../ui/FrameHeader"
 import SelectTime from "../ui/SelectTime"
 import { ChartBarStacked } from "./CashflowChart"
 
-export default function DashCashFlow() {
+export default function CashflowSection() {
   return (
     <Frame>
       <div className="h-[20rem]">

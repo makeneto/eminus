@@ -2,6 +2,23 @@
 @use '../../base/variables' as v;
 
 .btn {
+      &--main {
+            background-color: v.$dark-green;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .4rem;
+            font-size: .8rem;
+            padding: .7rem;
+            border-radius: .7rem;
+            transition: all .2s ease-out;
+
+            &:hover {
+                  background-color: v.$hovered-dark-green;
+            }
+      }
+
       &--primary {
             display: flex;
             align-items: center;

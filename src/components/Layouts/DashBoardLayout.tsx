@@ -1,10 +1,10 @@
 import CardSection from "../cardSection/CardSection"
 import AsideTransaction from "../dashboard/AsideTransaction"
-import DashCashFlow from "../dashboard/CashflowSum"
+import DashCashFlow from "../dashboard/CashflowSection"
 import DashSummary from "../dashboard/DashSummary"
 import RecentTransactionTable from "../dashboard/RecentTransactionTable"
 
-export default function DashBoardLayout() {
+export default function DashboardLayout() {
   return (
     <main className="dashLayout">
       <CardSection />

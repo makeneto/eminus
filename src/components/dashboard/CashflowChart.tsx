@@ -10,12 +10,11 @@ import {
 } from "@/components/ui/chart"
 
 const chartData = [
-  { month: "January", income: 186, expense: 80 },
-  { month: "February", income: 305, expense: 200 },
-  { month: "March", income: 237, expense: 120 },
-  { month: "April", income: 73, expense: 190 },
-  { month: "May", income: 209, expense: 130 },
-  { month: "June", income: 214, expense: 140 },
+  { month: "January", income: 186000, expense: 80000 },
+  { month: "February", income: 305000, expense: 200000 },
+  { month: "March", income: 237000, expense: 120000 },
+  { month: "April", income: 73000, expense: 190000 },
+  { month: "May", income: 209000, expense: 130000 },
 ]
 
 const chartConfig = {
@@ -55,13 +54,14 @@ export function ChartBarStacked() {
             stackId="a"
             fill="var(--color-income)"
             radius={[0, 0, 4, 4]}
+            barSize={50}
           />
           <Bar
             dataKey="expense"
             stackId="a"
             fill="var(--color-expense)"
             radius={[4, 4, 0, 0]}
-            barSize={32}
+            barSize={50}
           />
         </BarChart>
       </ChartContainer>

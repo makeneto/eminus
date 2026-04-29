@@ -18,12 +18,27 @@ button {
   font-size: 0.6rem;
 }
 
+.btn--main {
+  background-color: #023535;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  transition: all 0.2s ease-out;
+}
+.btn--main:hover {
+  background-color: #044e4e;
+}
 .btn--primary {
   display: flex;
   align-items: center;
   gap: 0.2rem;
   font-size: 0.72rem;
-  color: #056161;
+  color: #044e4e;
   transition: color 0.2s ease-in;
 }
 .btn--primary svg {
@@ -56,7 +71,7 @@ button {
   transition: all 0.2s ease-in;
 }
 .settingButton:hover {
-  color: #056161;
+  color: #044e4e;
 }
 
 .recent-transactions {
@@ -156,7 +171,7 @@ button {
   transition: all 0.2s ease-in;
 }
 .cardControls button:hover {
-  color: #056161;
+  color: #044e4e;
 }
 .cardControls button:not(:last-child) {
   border-right: 0.1rem solid white;
@@ -419,6 +434,41 @@ button {
 .pages {
   background-color: white;
   padding: 1.5rem;
+}
+
+.plans__header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.plans__header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eef8ef;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.plans__header-content-text p {
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+.plans__header-content-text h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.plans__header-content-icon {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.6rem;
+}
+.plans__main {
+  margin-top: 2rem;
+  padding-block: 2rem;
+  border-top: 0.1rem solid #e2ebeb;
+  display: grid;
+  grid-template-columns: 20% auto;
+  gap: 0.98rem;
 }
 
 .no-scroll-bar::-webkit-scrollbar {

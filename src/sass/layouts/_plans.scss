@@ -1,0 +1,45 @@
+@use '../base/variables' as v;
+
+.plans {
+      &__header {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+
+            &-content {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  background-color: v.$light-green;
+                  border-radius: v.$borderRadius;
+                  padding: 1rem;
+
+                  &-text {
+                        p {
+                              font-weight: 500;
+                              font-size: .85rem;
+                        }
+
+                        h1 {
+                              font-size: 1.25rem;
+                              font-weight: bold;
+                        }
+                  }
+
+                  &-icon {
+                        background-color: white;
+                        border-radius: 50%;
+                        padding: 0.6rem;
+                  }
+            }
+      }
+
+      &__main {
+            margin-top: 2rem;
+            padding-block: 2rem;
+            border-top: v.$lightBorder;
+            display: grid;
+            grid-template-columns: 20% auto;
+            gap: v.$spacing
+      }
+}
