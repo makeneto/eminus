@@ -34,12 +34,57 @@
             }
       }
 
+      &__card {
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            
+            &:hover {
+                  background-color: v.$light-green;
+                  border: 1px solid transparent;
+            }
+            
+            &--icon {
+                  transition: all .2s ease-in-out;
+                  background-color: v.$light-green;
+            }
+            
+            &:hover &--icon {
+                  background-color: white;
+            }
+            
+      }
+
       &__main {
+            height: 79vh;
             margin-top: 2rem;
             padding-block: 2rem;
             border-top: v.$lightBorder;
             display: grid;
             grid-template-columns: 20% auto;
             gap: v.$spacing
+      }
+
+      &__resume {
+            display: grid;
+            gap: v.$spacing;
+            grid-template-rows: 60% auto;
+
+            &-content {
+                  display: grid;
+                  grid-template-columns: 25% auto 25% ;
+                  gap: v.$spacing;
+            }
+      }
+
+      &__setting {
+            padding: 1rem;
+            background-color: v.$light-green;
+            border-radius: v.$borderRadius;
+      }
+
+      &__feats {
+            display: grid;
+            grid-template-rows: auto 60%;
+            gap: v.$spacing;
       }
 }

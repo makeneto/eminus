@@ -1,5 +1,5 @@
 import { Goal, Hourglass, Layers, Wallet } from "lucide-react"
-import PlansHeaderCard from "../savingPlans/PlansHeaderCard"
+import PlansHeaderCard from "./PlansHeaderCard"
 
 export default function PlansHeader() {
   return (

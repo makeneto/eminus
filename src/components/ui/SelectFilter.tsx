@@ -7,7 +7,7 @@ import {
   SelectValue,
 } from "./select"
 
-export default function SelectTime({ group }: { group: string[] }) {
+export default function SelectFilter({ group }: { group: string[] }) {
   return (
     <Select>
       <SelectTrigger className="w-44">

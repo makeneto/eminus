@@ -1,6 +1,6 @@
 import Frame from "../ui/Frame"
 import FrameHeader from "../ui/FrameHeader"
-import SelectTime from "../ui/SelectTime"
+import SelectTime from "../ui/SelectFilter"
 
 export default function RecentTransactionTable() {
   const transactions = [

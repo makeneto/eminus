@@ -1,16 +1,17 @@
-import { Plus } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 
 import Frame from "../ui/Frame"
 import FrameHeader from "../ui/FrameHeader"
 import SinglePlan from "./SinglePlan"
+import { Button } from "../ui/button"
 
 export default function SavingPlans() {
   return (
     <Frame>
       <FrameHeader title="Saving Plans">
-        <button className="btn--primary">
-          <Plus /> Add Plan
-        </button>
+        <Button variant="ghost" size="icon-xs">
+          <ArrowUpRight />
+        </Button>
       </FrameHeader>
 
       <div className="grid gap-1">
@@ -18,9 +19,9 @@ export default function SavingPlans() {
         <h2 className="font-bold">1 250 000 Kz</h2>
       </div>
 
-      <SinglePlan />
-      <SinglePlan />
-      <SinglePlan />
+      <SinglePlan title="Vacation Fund" saving={98000} target={250000} />
+      <SinglePlan title="Emergency Fund" saving={50000} target={100000} />
+      <SinglePlan title="Home Down Payment" saving={200000} target={500000} />
     </Frame>
   )
 }

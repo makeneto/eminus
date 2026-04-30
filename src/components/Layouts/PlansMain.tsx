@@ -1,27 +1,29 @@
-import { Plus } from "lucide-react"
-import SinglePlan from "../cardSection/SinglePlan"
 import Frame from "../ui/Frame"
-import FrameHeader from "../ui/FrameHeader"
+import PlansList from "../savingPlans/PlansList"
+import SavingTips from "../savingPlans/SavingTips"
+import SavingBalance from "../savingPlans/SavingBalance"
+import SettingPlan from "../savingPlans/SettingPlan"
+import TransactionsPlans from "../savingPlans/TransactionsPlans"
+import PlansRanking from "../savingPlans/PlansRanking"
 
 export default function PlansMain() {
   return (
     <div className="plans__main">
-      <Frame>
-        <FrameHeader title="Saving Plans" />
+      <PlansList />
 
-        <SinglePlan type="main" />
-        <SinglePlan type="main" />
-        <SinglePlan type="main" />
-        <SinglePlan type="main" />
-        <SinglePlan type="main" />
+      <Frame className="plans__resume">
+        <div className="plans__resume-content">
+          <SettingPlan />
 
-        <button className="btn--main">
-          <Plus size={14} /> Add Plan
-        </button>
-      </Frame>
+          <div className="plans__feats">
+            <SavingTips />
+            <SavingBalance />
+          </div>
 
-      <Frame>
-        <h1>Plans</h1>
+          <PlansRanking />
+        </div>
+
+        <TransactionsPlans />
       </Frame>
     </div>
   )

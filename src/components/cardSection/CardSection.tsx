@@ -1,7 +1,7 @@
+import SavingPlans from "../savingPlans/SavingPlans"
 import Card from "./Card"
 import CardControls from "./CardControls"
 import DailyLimit from "./DailyLimit"
-import SavingPlans from "./SavingPlans"
 
 export default function CardSection() {
   return (

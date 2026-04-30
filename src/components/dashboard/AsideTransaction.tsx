@@ -1,7 +1,7 @@
 import { ChartPieDonutText } from "./ChartPieDonutText"
 import Frame from "../ui/Frame"
 import FrameHeader from "../ui/FrameHeader"
-import SelectTime from "../ui/SelectTime"
+import SelectFilter from "../ui/SelectFilter"
 import { RecentActivity } from "./RecentActivity"
 
 export default function AsideTransaction() {
@@ -9,7 +9,7 @@ export default function AsideTransaction() {
     <section className="aside-transaction">
       <Frame>
         <FrameHeader title="Statistics">
-          <SelectTime
+          <SelectFilter
             group={["This Month", "Last Month", "February", "January"]}
           />
         </FrameHeader>

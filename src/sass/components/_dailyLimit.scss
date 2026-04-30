@@ -26,6 +26,7 @@
       height: .4rem;
       background-color: v.$primary-green;
       border-radius: v.$borderRadius;
+      overflow: hidden;
 
       & div {
             background-color: v.$dark-green;

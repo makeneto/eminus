@@ -18,7 +18,7 @@ button {
   font-size: 0.6rem;
 }
 
-.btn--main {
+.btn--primary {
   background-color: #023535;
   color: white;
   display: flex;
@@ -30,23 +30,8 @@ button {
   border-radius: 0.7rem;
   transition: all 0.2s ease-out;
 }
-.btn--main:hover {
-  background-color: #044e4e;
-}
-.btn--primary {
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-  font-size: 0.72rem;
-  color: #044e4e;
-  transition: color 0.2s ease-in;
-}
-.btn--primary svg {
-  width: 0.78rem;
-  height: 0.78rem;
-}
 .btn--primary:hover {
-  color: #023535;
+  background-color: #044e4e;
 }
 
 .frame {
@@ -302,6 +287,7 @@ button {
   height: 0.4rem;
   background-color: #9ae287;
   border-radius: 1rem;
+  overflow: hidden;
 }
 .progressBar div {
   background-color: #023535;
@@ -462,12 +448,48 @@ button {
   border-radius: 50%;
   padding: 0.6rem;
 }
+.plans__card {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.plans__card:hover {
+  background-color: #eef8ef;
+  border: 1px solid transparent;
+}
+.plans__card--icon {
+  transition: all 0.2s ease-in-out;
+  background-color: #eef8ef;
+}
+.plans__card:hover .plans__card--icon {
+  background-color: white;
+}
 .plans__main {
+  height: 79vh;
   margin-top: 2rem;
   padding-block: 2rem;
   border-top: 0.1rem solid #e2ebeb;
   display: grid;
   grid-template-columns: 20% auto;
+  gap: 0.98rem;
+}
+.plans__resume {
+  display: grid;
+  gap: 0.98rem;
+  grid-template-rows: 60% auto;
+}
+.plans__resume-content {
+  display: grid;
+  grid-template-columns: 25% auto 25%;
+  gap: 0.98rem;
+}
+.plans__setting {
+  padding: 1rem;
+  background-color: #eef8ef;
+  border-radius: 1rem;
+}
+.plans__feats {
+  display: grid;
+  grid-template-rows: auto 60%;
   gap: 0.98rem;
 }
 
