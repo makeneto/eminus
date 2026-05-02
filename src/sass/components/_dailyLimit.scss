@@ -23,14 +23,26 @@
 
 .progressBar {
       width: 100%;
-      height: .4rem;
-      background-color: v.$primary-green;
-      border-radius: v.$borderRadius;
       overflow: hidden;
+
+      &--sm {
+            height: .4rem;
+            border-radius: v.$borderRadius;
+            background-color: v.$primary-green;
+
+            & div {
+                  border-radius: v.$borderRadius;
+            }
+      }
+
+      &--lg {
+            height: 3rem;
+            border-radius: .56rem;
+            background-color: v.$primary-green;
+      }
 
       & div {
             background-color: v.$dark-green;
             height: 100%;
-            border-radius: v.$borderRadius;
       }
 }

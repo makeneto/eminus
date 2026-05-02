@@ -284,15 +284,24 @@ button {
 
 .progressBar {
   width: 100%;
-  height: 0.4rem;
-  background-color: #9ae287;
-  border-radius: 1rem;
   overflow: hidden;
+}
+.progressBar--sm {
+  height: 0.4rem;
+  border-radius: 1rem;
+  background-color: #9ae287;
+}
+.progressBar--sm div {
+  border-radius: 1rem;
+}
+.progressBar--lg {
+  height: 3rem;
+  border-radius: 0.56rem;
+  background-color: #9ae287;
 }
 .progressBar div {
   background-color: #023535;
   height: 100%;
-  border-radius: 1rem;
 }
 
 .dashboard__summary {
@@ -486,6 +495,11 @@ button {
   padding: 1rem;
   background-color: #eef8ef;
   border-radius: 1rem;
+}
+.plans__setting--list {
+  display: grid;
+  grid-template-columns: 40% auto;
+  gap: 1.5rem;
 }
 .plans__feats {
   display: grid;

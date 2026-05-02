@@ -71,7 +71,7 @@
 
             &-content {
                   display: grid;
-                  grid-template-columns: 25% auto 25% ;
+                  grid-template-columns: 25% auto 25%;
                   gap: v.$spacing;
             }
       }
@@ -80,6 +80,12 @@
             padding: 1rem;
             background-color: v.$light-green;
             border-radius: v.$borderRadius;
+
+            &--list {
+                  display: grid;
+                  grid-template-columns: 40% auto;
+                  gap: 1.5rem;
+            }
       }
 
       &__feats {
