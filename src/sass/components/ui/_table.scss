@@ -1,4 +1,6 @@
-.recent-transactions {
+@use '../../base/variables' as v;
+
+.transaction-table {
       display: flex;
       flex-direction: column;
       gap: 2rem;
@@ -82,19 +84,20 @@
                               }
 
                               &.failed span {
-                                    background: #fee2e2;
-                                    color: #dc2626;
+                                    background: v.$failed-bg;
+                                    color: v.$failed-color;
+                              }
+                              
+                              &.pending span {
+                                    background: v.$pending-bg;
+                                    color: v.$pending-color;
                               }
 
                               &.completed span {
-                                    background: #dcfce7;
-                                    color: #16a34a;
+                                    background: v.$completed-bg;
+                                    color: v.$completed-color;
                               }
 
-                              &.pending span {
-                                    background: #fef9c3;
-                                    color: #ca8a04;
-                              }
 
                               &.default span {
                                     background: #f3f4f6;

@@ -7,7 +7,7 @@ export default function CardSection() {
   return (
     <div className="cardSection">
       <Card />
-      <CardControls />
+      <CardControls type="cards" />
       <DailyLimit />
       <SavingPlans />
     </div>

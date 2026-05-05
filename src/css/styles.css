@@ -59,95 +59,111 @@ button {
   color: #044e4e;
 }
 
-.recent-transactions {
+.transaction-table {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.recent-transactions .table-wrapper {
+.transaction-table .table-wrapper {
   overflow-x: auto;
 }
-.recent-transactions table {
+.transaction-table table {
   width: 100%;
   font-size: 0.875rem;
   border-collapse: collapse;
 }
-.recent-transactions table thead tr {
+.transaction-table table thead tr {
   text-align: left;
   color: #6b7280;
   background: #ecfdf5;
   border-bottom: 1px solid #e5e7eb;
 }
-.recent-transactions table thead tr th {
+.transaction-table table thead tr th {
   font-weight: normal;
   padding: 0.75rem 1rem;
 }
-.recent-transactions table tbody tr {
+.transaction-table table tbody tr {
   border-bottom: 1px solid #e5e7eb;
   transition: background 0.2s ease;
 }
-.recent-transactions table tbody tr:last-child {
+.transaction-table table tbody tr:last-child {
   border-bottom: none;
 }
-.recent-transactions table tbody tr:hover {
+.transaction-table table tbody tr:hover {
   background: #f9fafb;
 }
-.recent-transactions table tbody tr td {
+.transaction-table table tbody tr td {
   padding: 1rem;
 }
-.recent-transactions table tbody tr .name p:first-child {
+.transaction-table table tbody tr .name p:first-child {
   font-weight: 500;
   color: #1f2937;
 }
-.recent-transactions table tbody tr .name p:last-child {
+.transaction-table table tbody tr .name p:last-child {
   font-size: 0.75rem;
   color: #9ca3af;
 }
-.recent-transactions table tbody tr .date {
+.transaction-table table tbody tr .date {
   color: #4b5563;
 }
-.recent-transactions table tbody tr .date p:last-child {
+.transaction-table table tbody tr .date p:last-child {
   font-size: 0.75rem;
   color: #9ca3af;
 }
-.recent-transactions table tbody tr .amount {
+.transaction-table table tbody tr .amount {
   font-weight: 500;
   color: #1f2937;
 }
-.recent-transactions table tbody tr .note {
+.transaction-table table tbody tr .note {
   color: #6b7280;
 }
-.recent-transactions table tbody tr .status span {
+.transaction-table table tbody tr .status span {
   padding: 0.25rem 0.75rem;
   font-size: 0.75rem;
   border-radius: 9999px;
   font-weight: 500;
 }
-.recent-transactions table tbody tr .status.failed span {
+.transaction-table table tbody tr .status.failed span {
   background: #fee2e2;
   color: #dc2626;
 }
-.recent-transactions table tbody tr .status.completed span {
-  background: #dcfce7;
-  color: #16a34a;
-}
-.recent-transactions table tbody tr .status.pending span {
+.transaction-table table tbody tr .status.pending span {
   background: #fef9c3;
   color: #ca8a04;
 }
-.recent-transactions table tbody tr .status.default span {
+.transaction-table table tbody tr .status.completed span {
+  background: #dcfce7;
+  color: #16a34a;
+}
+.transaction-table table tbody tr .status.default span {
   background: #f3f4f6;
   color: #4b5563;
 }
 
 .cardControls {
-  background-color: #eef8ef;
+  flex: 1;
+  width: 100%;
   display: flex;
   align-items: center;
-  padding-block: 1rem;
   border-radius: 1rem;
 }
+.cardControls--cards {
+  background-color: #eef8ef;
+  padding-block: 1rem;
+}
+.cardControls--cards button:not(:last-child) {
+  border-right: 0.1rem solid white;
+}
+.cardControls--plans {
+  border: 0.1rem solid #e2ebeb;
+  background-color: white;
+  padding-block: 1rem;
+}
+.cardControls--plans button:not(:last-child) {
+  border-right: 0.1rem solid rgba(2, 53, 53, 0.1137254902);
+}
 .cardControls button {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -157,9 +173,6 @@ button {
 }
 .cardControls button:hover {
   color: #044e4e;
-}
-.cardControls button:not(:last-child) {
-  border-right: 0.1rem solid white;
 }
 .cardControls button svg {
   width: 1.1rem;
@@ -469,6 +482,12 @@ button {
   transition: all 0.2s ease-in-out;
   background-color: #eef8ef;
 }
+.plans__card--icon-edit {
+  cursor: pointer;
+}
+.plans__card--icon-edit:hover {
+  background-color: #044e4e;
+}
 .plans__card:hover .plans__card--icon {
   background-color: white;
 }
@@ -481,6 +500,17 @@ button {
   grid-template-columns: 20% auto;
   gap: 0.98rem;
 }
+.plans__list {
+  display: grid;
+  gap: 0.98rem;
+  border-bottom: 0.1rem solid #e2ebeb;
+  padding-bottom: 0.98rem;
+}
+.plans__list--items {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+}
 .plans__resume {
   display: grid;
   gap: 0.98rem;
@@ -488,7 +518,7 @@ button {
 }
 .plans__resume-content {
   display: grid;
-  grid-template-columns: 25% auto 25%;
+  grid-template-columns: 25% auto 35%;
   gap: 0.98rem;
 }
 .plans__setting {
@@ -498,13 +528,8 @@ button {
 }
 .plans__setting--list {
   display: grid;
-  grid-template-columns: 40% auto;
+  grid-template-columns: 40% 95%;
   gap: 1.5rem;
-}
-.plans__feats {
-  display: grid;
-  grid-template-rows: auto 60%;
-  gap: 0.98rem;
 }
 
 .no-scroll-bar::-webkit-scrollbar {

@@ -1,65 +1,73 @@
-import { BanknoteArrowUp, Plane } from "lucide-react"
+import { Plane } from "lucide-react"
 import ProgressBar from "../ui/ProgressBar"
+import CardControls from "../cardSection/CardControls"
 
 export default function SettingPlan() {
+  const plan = {
+    name: "Vacation Fund",
+    currentAmount: 98000,
+    targetAmount: 250000,
+    dueDate: "31 December, 2026",
+    remainingDays: 95,
+    status: "In Progress",
+  }
+
+  const { name, currentAmount, targetAmount, dueDate, remainingDays, status } =
+    plan
+
+  const percentage = Math.round((currentAmount / targetAmount) * 100)
+
   return (
     <div className="plans__setting">
       <div className="flex items-center gap-3.5 mb-7.5">
         <div className="p-2.5 rounded-full bg-white">
           <Plane size={17} />
         </div>
-        <h2 className="text-[1rem] font-medium">Vacation Fund</h2>
+        <h2 className="text-[1rem] font-medium">{name}</h2>
       </div>
 
       <div className="grid gap-4 border-b border-b-zinc-300 pb-5">
         <div className="flex items-end gap-1">
-          <p className="text-xl font-bold">98 000 kz </p>
+          <p className="text-xl font-bold">
+            {currentAmount.toLocaleString()} kz{" "}
+          </p>
           <span className="text-muted-foreground text-sm pb-0.5">
-            / 250 000 kz
+            / {targetAmount.toLocaleString()} kz
           </span>
         </div>
 
-        <ProgressBar value={39} size="lg" />
+        <ProgressBar value={percentage} size="lg" />
 
         <div className="flex items-center justify-between">
-          <p className="font-medium text-[0.9rem]">In Progress</p>
-          <p className="font-medium">39%</p>
+          <p className="font-medium text-[0.9rem]">{status}</p>
+          <p className="font-medium">{percentage}%</p>
         </div>
       </div>
 
-      <div className="pt-5 grid gap-3.5 items-center">
-        <div className="flex plans__setting--list">
-          <p className="font-medium text-[.78rem] text-muted-foreground">
-            Last Transactions
-          </p>
+      <div className="pt-5 flex-col justify-between items-center">
+        <div className="grid gap-2 items-center justify-between">
+          <div className="flex items-center plans__setting--list">
+            <p className="font-medium text-[.78rem] text-muted-foreground">
+              Due Date
+            </p>
+            <p className="font-medium text-[.78rem]">{dueDate}</p>
+          </div>
+          <div className="flex items-center plans__setting--list">
+            <p className="font-medium text-[.78rem] text-muted-foreground">
+              Remaining
+            </p>
+            <p className="font-medium text-[.78rem]">{remainingDays} days</p>
+          </div>
 
-          <div className="grid gap-3.5">
-            <p className="flex items-center gap-2 font-medium text-[.78rem]">
-              <BanknoteArrowUp size={15} />
-              24/04/2026
+          <div className="flex items-center plans__setting--list">
+            <p className="font-medium text-[.78rem] text-muted-foreground">
+              Status
             </p>
-            <p className="flex items-center gap-2 font-medium text-[.78rem]">
-              <BanknoteArrowUp size={15} /> 26/05/2026
-            </p>
-            <p className="flex items-center gap-2 font-medium text-[.78rem]">
-              <BanknoteArrowUp size={15} /> 28/06/2026
-            </p>
+            <p className="font-medium text-[.78rem]">{status}</p>
           </div>
         </div>
 
-        <div className="flex items-center plans__setting--list">
-          <p className="font-medium text-[.78rem] text-muted-foreground">
-            Due Date
-          </p>
-          <p className="font-medium text-[.78rem]">31 December, 2026</p>
-        </div>
-
-        <div className="flex items-center plans__setting--list">
-          <p className="font-medium text-[.78rem] text-muted-foreground">
-            Remaining
-          </p>
-          <p className="font-medium text-[.78rem]">95 days</p>
-        </div>
+        <CardControls type="plans" className="mt-5" />
       </div>
     </div>
   )

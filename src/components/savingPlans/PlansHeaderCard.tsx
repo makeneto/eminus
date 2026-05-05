@@ -5,7 +5,7 @@ interface PlansHeaderCardProps {
   title: string
   value: number
   icon: React.ReactNode
-  type?: "amount" | "count"
+  type?: "amount" | "countPlans"
   percent?: number
 }
 
@@ -27,6 +27,9 @@ export default function PlansHeaderCard({
               ? value.toLocaleString()
               : value.toLocaleString()}{" "}
             {type === "amount" ? "kz" : ""}
+            {type === "countPlans" && (
+              <span className="text-muted-foreground text-sm font-normal">/ 3</span>
+            )}
           </h1>
           {percent !== undefined && <GrowthIndicator percent={percent} />}
         </div>

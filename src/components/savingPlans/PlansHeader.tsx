@@ -24,9 +24,9 @@ export default function PlansHeader() {
       />
       <PlansHeaderCard
         title="Total Plans"
-        value={12}
+        value={2}
         icon={<Layers />}
-        type="count"
+        type="countPlans"
       />
     </header>
   )

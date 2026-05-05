@@ -22,11 +22,9 @@ import {
 export const description = "A donut chart with an active sector"
 
 const chartData = [
-  { plan: "Vacation", completed: 275, fill: "var(--color-vacation)" },
-  { plan: "Emergency", completed: 200, fill: "var(--color-emergency)" },
-  { plan: "Home", completed: 187, fill: "var(--color-home)" },
-  { plan: "New Car", completed: 173, fill: "var(--color-newCar)" },
-  { plan: "Graduation", completed: 90, fill: "var(--color-graduation)" },
+  { plan: "Vacation", completed: 210000, fill: "var(--color-vacation)" },
+  { plan: "Emergency", completed: 150000, fill: "var(--color-emergency)" },
+  { plan: "Home", completed: 100000, fill: "var(--color-home)" },
 ]
 
 const chartConfig = {
@@ -43,15 +41,7 @@ const chartConfig = {
   },
   home: {
     label: "Home",
-    color: "var(--chart-3)",
-  },
-  newCar: {
-    label: "New Car",
     color: "var(--chart-4)",
-  },
-  graduation: {
-    label: "Graduation",
-    color: "var(--chart-5)",
   },
 } satisfies ChartConfig
 
