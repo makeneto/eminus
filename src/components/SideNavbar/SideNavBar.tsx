@@ -16,6 +16,7 @@ export default function SideNavBar() {
       <nav>
         <NavLink
           to="/"
+          prefetch="intent"
           className={({ isActive }) => (isActive ? "active" : "")}
         >
           <ChartNoAxesCombined />
@@ -23,6 +24,7 @@ export default function SideNavBar() {
         </NavLink>
         <NavLink
           to="/payments"
+          prefetch="intent"
           className={({ isActive }) => (isActive ? "active" : "")}
         >
           <CreditCard />
@@ -30,6 +32,7 @@ export default function SideNavBar() {
         </NavLink>
         <NavLink
           to="/transactions"
+          prefetch="intent"
           className={({ isActive }) => (isActive ? "active" : "")}
         >
           <ArrowLeftRight />
@@ -37,6 +40,7 @@ export default function SideNavBar() {
         </NavLink>
         <NavLink
           to="/plans"
+          prefetch="intent"
           className={({ isActive }) => (isActive ? "active" : "")}
         >
           <Leaf />
@@ -44,6 +48,7 @@ export default function SideNavBar() {
         </NavLink>
         <NavLink
           to="/investments"
+          prefetch="intent"
           className={({ isActive }) => (isActive ? "active" : "")}
         >
           <TrendingUp />

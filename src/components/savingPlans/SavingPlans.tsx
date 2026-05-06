@@ -4,14 +4,17 @@ import Frame from "../ui/Frame"
 import FrameHeader from "../ui/FrameHeader"
 import SinglePlan from "./SinglePlan"
 import { Button } from "../ui/button"
+import { Link } from "react-router-dom"
 
 export default function SavingPlans() {
   return (
     <Frame>
       <FrameHeader title="Saving Plans">
-        <Button variant="ghost" size="icon-xs">
-          <ArrowUpRight />
-        </Button>
+        <Link to="/plans" prefetch="render" className="ml-auto">
+          <Button variant="ghost" size="icon-xs">
+            <ArrowUpRight />
+          </Button>
+        </Link>
       </FrameHeader>
 
       <div className="grid gap-1">

@@ -1,21 +1,24 @@
 import { Plane } from "lucide-react"
 import ProgressBar from "../ui/ProgressBar"
 import CardControls from "../cardSection/CardControls"
+import { plansData } from "@/constants/plansData"
+import { formatDate } from "@/utils/formatDate"
 
 export default function SettingPlan() {
-  const plan = {
-    name: "Vacation Fund",
-    currentAmount: 98000,
-    targetAmount: 250000,
-    dueDate: "31 December, 2026",
-    remainingDays: 95,
-    status: "In Progress",
-  }
+  const plan = plansData.find((plan) => plan.id === "plan_01")
 
-  const { name, currentAmount, targetAmount, dueDate, remainingDays, status } =
-    plan
+  if (!plan) return
 
-  const percentage = Math.round((currentAmount / targetAmount) * 100)
+  const { title, saving, target, deadline } = plan
+
+  const percentage = Math.round((saving / target) * 100)
+
+  const remainingDays = Math.ceil(
+    (new Date(deadline).getTime() - new Date().getTime()) /
+      (1000 * 60 * 60 * 24),
+  )
+
+  const formattedDeadline = formatDate(deadline)
 
   return (
     <div className="plans__setting">
@@ -23,23 +26,23 @@ export default function SettingPlan() {
         <div className="p-2.5 rounded-full bg-white">
           <Plane size={17} />
         </div>
-        <h2 className="text-[1rem] font-medium">{name}</h2>
+        <h2 className="text-[1rem] font-medium">{title}</h2>
       </div>
 
       <div className="grid gap-4 border-b border-b-zinc-300 pb-5">
         <div className="flex items-end gap-1">
-          <p className="text-xl font-bold">
-            {currentAmount.toLocaleString()} kz{" "}
-          </p>
+          <p className="text-xl font-bold">{saving.toLocaleString()} kz </p>
           <span className="text-muted-foreground text-sm pb-0.5">
-            / {targetAmount.toLocaleString()} kz
+            / {target.toLocaleString()} kz
           </span>
         </div>
 
         <ProgressBar value={percentage} size="lg" />
 
         <div className="flex items-center justify-between">
-          <p className="font-medium text-[0.9rem]">{status}</p>
+          <p className="font-medium text-[0.9rem]">
+            {percentage < 100 ? "In Process" : "Completed"}
+          </p>
           <p className="font-medium">{percentage}%</p>
         </div>
       </div>
@@ -50,7 +53,7 @@ export default function SettingPlan() {
             <p className="font-medium text-[.78rem] text-muted-foreground">
               Due Date
             </p>
-            <p className="font-medium text-[.78rem]">{dueDate}</p>
+            <p className="font-medium text-[.78rem]">{formattedDeadline}</p>
           </div>
           <div className="flex items-center plans__setting--list">
             <p className="font-medium text-[.78rem] text-muted-foreground">
@@ -63,7 +66,9 @@ export default function SettingPlan() {
             <p className="font-medium text-[.78rem] text-muted-foreground">
               Status
             </p>
-            <p className="font-medium text-[.78rem]">{status}</p>
+            <p className="font-medium text-[.78rem]">
+              {percentage < 100 ? "In Process" : "Completed"}
+            </p>
           </div>
         </div>
 

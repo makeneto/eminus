@@ -7,8 +7,8 @@ export default function PlanInsights() {
     <Frame className="plans__insights">
       <FrameHeader title="Plan Insights" />
 
-      <div className="grid gap-4">
-        <div className="flex items-center gap-4 py-4 border-b">
+      <div className="grid">
+        <div className="flex items-center gap-4 pt-2 pb-5 border-b">
           <div className="bg-[#fef9c3] p-2.5 rounded-full">
             <CalendarClock size={19} className="text-[#ca8a04]" />
           </div>
@@ -23,7 +23,7 @@ export default function PlanInsights() {
           </div>
         </div>
 
-        <div className="flex items-center gap-4 py-4">
+        <div className="flex items-center gap-4 pt-5 pb-4">
           <div className="bg-[#dcfce7] p-2.5 rounded-full">
             <Trophy size={19} className="text-[#16a34a]" />
           </div>

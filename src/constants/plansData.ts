@@ -1,0 +1,40 @@
+export const plansData = [
+  {
+    id: "plan_01",
+    title: "Vacation Fund",
+    description: "Save for a summer getaway.",
+    category: "travel",
+    saving: 98000,
+    target: 250000,
+    monthlyContribution: 332,
+    startDate: "2024-01-01",
+    deadline: "2027-06-01",
+    autoDeposit: true,
+  },
+  {
+    id: "plan_02",
+    title: "Emergency Fund",
+    description: "Build an emergency fund.",
+    category: "emergency",
+    saving: 50000,
+    target: 100000,
+    monthlyContribution: 221,
+    startDate: "2024-01-01",
+    deadline: "2027-06-01",
+    autoDeposit: true,
+  },
+  {
+    id: "plan_03",
+    title: "Home Down Payment",
+    description: "Down payment for a 3-bedroom apartment in Talatona.",
+    category: "real_estate",
+    saving: 200000,
+    target: 500000,
+    monthlyContribution: 10,
+    startDate: "2024-01-01",
+    deadline: "2027-06-01",
+    autoDeposit: true,
+  },
+]
+
+export type Plan = (typeof plansData)[number]

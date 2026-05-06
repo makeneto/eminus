@@ -9,6 +9,7 @@ interface SinglePlanProps {
   target: number
   type?: "main" | "secondary"
   isActive?: boolean
+  onClick?: () => void
 }
 
 export default function SinglePlan({
@@ -17,12 +18,27 @@ export default function SinglePlan({
   target,
   type = "secondary",
   isActive = false,
+  onClick,
 }: SinglePlanProps) {
   const isMain = type === "main"
   const process = Math.round((saving / target) * 100)
+  const clickable = Boolean(onClick)
 
   return (
-    <Frame className={`plans__card ${isActive && "plans__card--active"}`}>
+    <Frame
+      className={`plans__card ${isActive ? "plans__card--active" : ""} ${
+        clickable ? "cursor-pointer" : ""
+      }`}
+      onClick={onClick}
+      role={clickable ? "button" : undefined}
+      tabIndex={clickable ? 0 : undefined}
+      onKeyDown={(event) => {
+        if (clickable && (event.key === "Enter" || event.key === " ")) {
+          event.preventDefault()
+          onClick?.()
+        }
+      }}
+    >
       {isMain ? (
         <>
           {/* MAIN */}
@@ -43,7 +59,9 @@ export default function SinglePlan({
               </div>
             </div>
 
-            {isActive && <MoveRight className="border border-white  bg-white absolute -right-14 top-[40%] w-8 h-auto" />}
+            {isActive && (
+              <MoveRight className="border border-white  bg-white absolute -right-14 top-[40%] w-8 h-auto" />
+            )}
 
             <div className="grid gap-1 text-right">
               <h2 className="text-sm font-medium">{process}%</h2>
