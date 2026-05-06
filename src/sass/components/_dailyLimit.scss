@@ -42,6 +42,7 @@
       }
 
       & div {
+            transition: all .2s ease-in;
             background-color: v.$dark-green;
             height: 100%;
       }

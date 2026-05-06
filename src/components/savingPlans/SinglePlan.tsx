@@ -1,3 +1,4 @@
+import { useMemo } from "react"
 import Frame from "../ui/Frame"
 import SettingButton from "../ui/SettingButton"
 import ProgressBar from "../ui/ProgressBar"
@@ -9,6 +10,7 @@ interface SinglePlanProps {
   target: number
   type?: "main" | "secondary"
   isActive?: boolean
+  active?: boolean
   onClick?: () => void
 }
 
@@ -21,11 +23,15 @@ export default function SinglePlan({
   onClick,
 }: SinglePlanProps) {
   const isMain = type === "main"
-  const process = Math.round((saving / target) * 100)
+  const process = useMemo(
+    () => Math.round((saving / target) * 100),
+    [saving, target],
+  )
   const clickable = Boolean(onClick)
 
   return (
     <Frame
+      active={isActive}
       className={`plans__card ${isActive ? "plans__card--active" : ""} ${
         clickable ? "cursor-pointer" : ""
       }`}

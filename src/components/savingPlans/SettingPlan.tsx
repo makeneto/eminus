@@ -1,24 +1,32 @@
+import { useMemo } from "react"
 import { Plane } from "lucide-react"
 import ProgressBar from "../ui/ProgressBar"
 import CardControls from "../cardSection/CardControls"
-import { plansData } from "@/constants/plansData"
 import { formatDate } from "@/utils/formatDate"
+import type { Plan } from "@/constants/plansData"
 
-export default function SettingPlan() {
-  const plan = plansData.find((plan) => plan.id === "plan_01")
+interface SettingPlanProps {
+  plan: Plan
+}
 
-  if (!plan) return
-
+export default function SettingPlan({ plan }: SettingPlanProps) {
   const { title, saving, target, deadline } = plan
 
-  const percentage = Math.round((saving / target) * 100)
-
-  const remainingDays = Math.ceil(
-    (new Date(deadline).getTime() - new Date().getTime()) /
-      (1000 * 60 * 60 * 24),
+  const percentage = useMemo(
+    () => Math.round((saving / target) * 100),
+    [saving, target],
   )
 
-  const formattedDeadline = formatDate(deadline)
+  const remainingDays = useMemo(
+    () =>
+      Math.ceil(
+        (new Date(deadline).getTime() - new Date().getTime()) /
+          (1000 * 60 * 60 * 24),
+      ),
+    [deadline],
+  )
+
+  const formattedDeadline = useMemo(() => formatDate(deadline), [deadline])
 
   return (
     <div className="plans__setting">

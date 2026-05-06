@@ -1,4 +1,4 @@
-import type { TransactionProps } from "@/interface/transaction"
+import type { TransactionProps } from "@/components/interfaces/transaction"
 
 export default function TransactionTable({
   transactions,

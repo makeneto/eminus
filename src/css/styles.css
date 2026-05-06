@@ -313,6 +313,7 @@ button {
   background-color: #9ae287;
 }
 .progressBar div {
+  transition: all 0.2s ease-in;
   background-color: #023535;
   height: 100%;
 }
