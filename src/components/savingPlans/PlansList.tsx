@@ -3,6 +3,7 @@ import Frame from "../ui/Frame"
 import FrameHeader from "../ui/FrameHeader"
 import SelectFilter from "../ui/SelectFilter"
 import SinglePlan from "./SinglePlan"
+import PlanInsights from "./PlanInsights"
 
 export default function PlansList() {
   return (
@@ -18,18 +19,21 @@ export default function PlansList() {
             saving={98000}
             target={250000}
             type="main"
+            isActive={true}
           />
           <SinglePlan
             title="Emergency Fund"
             saving={50000}
             target={100000}
             type="main"
+            isActive={false}
           />
           <SinglePlan
             title="Home Down Payment"
             saving={200000}
             target={500000}
             type="main"
+            isActive={false}
           />
         </div>
 
@@ -37,6 +41,8 @@ export default function PlansList() {
           <Plus size={14} /> Add Plan
         </button>
       </div>
+
+      <PlanInsights />
     </Frame>
   )
 }

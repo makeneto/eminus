@@ -1,13 +1,14 @@
 import Frame from "../ui/Frame"
 import SettingButton from "../ui/SettingButton"
 import ProgressBar from "../ui/ProgressBar"
-import { Plane } from "lucide-react"
+import { MoveRight, Plane } from "lucide-react"
 
 interface SinglePlanProps {
   title: string
   saving: number
   target: number
   type?: "main" | "secondary"
+  isActive?: boolean
 }
 
 export default function SinglePlan({
@@ -15,16 +16,17 @@ export default function SinglePlan({
   saving,
   target,
   type = "secondary",
+  isActive = false,
 }: SinglePlanProps) {
   const isMain = type === "main"
   const process = Math.round((saving / target) * 100)
 
   return (
-    <Frame className="plans__card">
+    <Frame className={`plans__card ${isActive && "plans__card--active"}`}>
       {isMain ? (
         <>
           {/* MAIN */}
-          <div className="flex items-center justify-between w-full ">
+          <div className="relative flex items-center justify-between w-full ">
             <div className="flex items-center gap-2">
               <div className="p-2.5 rounded-full plans__card--icon">
                 <Plane size={17} />
@@ -40,6 +42,8 @@ export default function SinglePlan({
                 </p>
               </div>
             </div>
+
+            {isActive && <MoveRight className="border border-white  bg-white absolute -right-14 top-[40%] w-8 h-auto" />}
 
             <div className="grid gap-1 text-right">
               <h2 className="text-sm font-medium">{process}%</h2>

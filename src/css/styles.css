@@ -474,6 +474,15 @@ button {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
+.plans__card--active {
+  background-color: #eef8ef;
+  border: 0.1rem solid rgba(143, 209, 125, 0.3294117647);
+}
+.plans__card--active .plans__card--icon {
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+  border: 0.1rem solid rgba(143, 209, 125, 0.3294117647);
+}
 .plans__card:hover {
   background-color: #eef8ef;
   border: 1px solid transparent;
@@ -481,12 +490,6 @@ button {
 .plans__card--icon {
   transition: all 0.2s ease-in-out;
   background-color: #eef8ef;
-}
-.plans__card--icon-edit {
-  cursor: pointer;
-}
-.plans__card--icon-edit:hover {
-  background-color: #044e4e;
 }
 .plans__card:hover .plans__card--icon {
   background-color: white;
@@ -511,6 +514,10 @@ button {
   grid-template-rows: repeat(3, 1fr);
   gap: 1rem;
 }
+.plans__insights {
+  border-top: 0.1rem solid rgba(143, 209, 125, 0.3294117647);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.052);
+}
 .plans__resume {
   display: grid;
   gap: 0.98rem;
@@ -524,6 +531,7 @@ button {
 .plans__setting {
   padding: 1rem;
   background-color: #eef8ef;
+  border: 0.1rem solid rgba(143, 209, 125, 0.3294117647);
   border-radius: 1rem;
 }
 .plans__setting--list {

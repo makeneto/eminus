@@ -37,7 +37,18 @@
       &__card {
             cursor: pointer;
             transition: all .2s ease-in-out;
-            
+
+            &--active {
+                  background-color: v.$light-green;
+                  border: v.$lightGreenBorder;
+
+                  .plans__card--icon {
+                        transition: all .2s ease-in-out;
+                        background-color: white;
+                        border: v.$lightGreenBorder;
+                  }
+            }
+
             &:hover {
                   background-color: v.$light-green;
                   border: 1px solid transparent;
@@ -46,27 +57,18 @@
             &--icon {
                   transition: all .2s ease-in-out;
                   background-color: v.$light-green;
-
-                  &-edit {
-                        cursor: pointer;
-
-                        &:hover {
-                              background-color: v.$hovered-dark-green;
-                        }
-                  }
             }
             
             &:hover &--icon {
                   background-color: white;
-            }
-            
+            }           
       }
 
       &__main {
             height: 79vh;
             margin-top: 2rem;
             padding-block: 2rem;
-            border-top: v.$lightBorder;
+            border-top: v.$lightGreyBorder;
             display: grid;
             grid-template-columns: 20% auto;
             gap: v.$spacing
@@ -75,7 +77,7 @@
       &__list {
             display: grid;
             gap: v.$spacing;
-            border-bottom: v.$lightBorder;
+            border-bottom: v.$lightGreyBorder;
             padding-bottom: v.$spacing;
 
             &--items {
@@ -83,6 +85,13 @@
                   grid-template-rows: repeat(3, 1fr);
                   gap: 1rem;
             }
+      }
+
+      &__insights {
+            // background-color: #eef8ef3d;
+            border-top: v.$lightGreenBorder;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.052);
+
       }
 
       &__resume {
@@ -100,6 +109,7 @@
       &__setting {
             padding: 1rem;
             background-color: v.$light-green;
+            border: v.$lightGreenBorder;
             border-radius: v.$borderRadius;
 
             &--list {
