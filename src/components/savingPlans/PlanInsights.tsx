@@ -13,9 +13,7 @@ export default function PlanInsights() {
             <CalendarClock size={19} className="text-[#ca8a04]" />
           </div>
           <div>
-            <p className="text-xs text-gray-600">
-              Monthly contribution needed
-            </p>
+            <p className="text-xs text-gray-600">Monthly contribution needed</p>
             <h2 className="font-semibold">
               18 750 kz <span className="font-normal text-xs"> / month</span>
             </h2>
