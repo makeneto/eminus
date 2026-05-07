@@ -1,9 +1,10 @@
+import { Route, Routes } from "react-router-dom"
+
 import Dashboard from "./pages/Dashboard"
-import Payments from "./pages/Payments"
 import Transactions from "./pages/Transactions"
 import Investments from "./pages/Investments"
 import Plans from "./pages/Plans"
-import { Route, Routes } from "react-router-dom"
+import Payments from "./pages/Payments"
 
 export default function App() {
   return (

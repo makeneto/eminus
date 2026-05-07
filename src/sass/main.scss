@@ -17,10 +17,11 @@
 @use './components/sideNavbar';
 
 @use './layouts/asideTransactions';
-@use './layouts/dashLayout';
+@use './layouts/dashboardLay';
 @use './layouts/header';
 @use './layouts/layout';
-@use './layouts/pages';
-@use './layouts/plans';
+@use './layouts/pagesLay';
+@use './layouts/paymentsLay';
+@use './layouts/plansLay';
 
 @use './utils/no-scrollBar';

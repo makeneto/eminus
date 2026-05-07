@@ -1,4 +1,4 @@
-import type { SavingPlan } from "@/components/interfaces/SavingPlan"
+import type { SavingPlan } from "../components/interfaces/savingPlan"
 
 export const plansData: SavingPlan[] = [
   {
@@ -9,8 +9,8 @@ export const plansData: SavingPlan[] = [
     saving: 98000,
     target: 250000,
     monthlyContribution: 332,
-    startDate: "2026-01-01",
-    deadline: "2027-06-01",
+    startDate: "2026-05-07",
+    deadline: "2026-10-31",
     autoDeposit: true,
     status: "in_progress",
     transactions: [],
@@ -26,7 +26,7 @@ export const plansData: SavingPlan[] = [
     target: 100000,
     monthlyContribution: 221,
     startDate: "2026-01-01",
-    deadline: "2027-06-01",
+    deadline: "2027-01-01",
     autoDeposit: true,
     status: "in_progress",
     transactions: [],
@@ -41,8 +41,8 @@ export const plansData: SavingPlan[] = [
     saving: 200000,
     target: 500000,
     monthlyContribution: 10,
-    startDate: "2026-01-01",
-    deadline: "2027-06-01",
+    startDate: "2026-06-01",
+    deadline: "2026-08-01",
     autoDeposit: true,
     status: "in_progress",
     transactions: [],

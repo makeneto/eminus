@@ -1,0 +1,104 @@
+@use '../base/variables' as v;
+
+.payments {
+      display: grid;
+      grid-template-columns: 21rem auto;
+
+      &__cardList {
+            background-color: v.$light-green;
+            border: v.$lightGreenBorder;
+
+
+            &--card {
+                  display: grid;
+                  gap: 1.2rem;
+                  padding: 1.2rem;
+                  background-color: white;
+                  border-radius: 1rem;
+                  cursor: pointer;
+
+                  &::after {
+                        content: "";
+                        position: absolute;
+                        width: 120px;
+                        height: 120px;
+                        background: rgba(255, 255, 255, 0.05);
+                        border-radius: 50%;
+                        right: -30px;
+                        bottom: -30px;
+                  }
+
+                  &:hover,
+                  &:active {
+                        background-color: v.$dark-green;
+
+                        .payments__cardList--card {
+                              &-title,
+                              &-bank,
+                              &-amount,
+                              &-cardNum,
+                              &-exp,
+                              &-cvv {
+                                    color: white;
+                              }
+
+                              &-logo {
+                                    & > g {
+                                          path:last-child {
+                                                fill: #9ae287;
+                                          }
+                                    }
+                              }
+
+                              &-accountType,
+                              &-cardNumText,
+                              &-expText,
+                              &-cvvText {
+                                    color: rgb(227, 227, 227);
+                              }
+                        }
+                  }
+                  
+                  &-title {
+                        font-size: small;
+                        font-weight: 500;
+                  }
+
+                  &-logo {
+                        width: 2.1rem;
+                        height: 2.1rem;
+
+                        & > g {
+                              path:first-child {
+                                    fill: transparent;
+                              }
+                              path:last-child {
+                                    fill: #023535;
+                              }
+                        }
+                  }
+                  
+                  &-bank {
+                        font-size: medium;
+                        font-weight: bold;
+                  }
+
+                  &-amount {
+                        font-size: 1.41rem;
+                        font-weight: 700;
+                  }
+
+                  &-accountType {
+                        color: rgb(73, 73, 73);
+                        font-weight: 500;
+                  }
+
+                  &-cardNumText,
+                  &-expText,
+                  &-cvvText {
+                        font-size: 0.7rem;
+                        color: rgb(93, 93, 93);
+                  }
+            }
+      }
+}

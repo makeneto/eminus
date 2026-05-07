@@ -1,5 +1,5 @@
 import SavingPlans from "../savingPlans/SavingPlans"
-import Card from "./Card"
+import Card from "./MainCard"
 import CardControls from "./CardControls"
 import DailyLimit from "./DailyLimit"
 

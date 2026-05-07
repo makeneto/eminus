@@ -146,13 +146,14 @@ button {
   display: flex;
   align-items: center;
   border-radius: 1rem;
+  border: 0.1rem solid rgba(143, 209, 125, 0.3294117647);
 }
 .cardControls--cards {
   background-color: #eef8ef;
   padding-block: 1rem;
 }
 .cardControls--cards button:not(:last-child) {
-  border-right: 0.1rem solid white;
+  border-right: 0.1rem solid rgba(143, 209, 125, 0.3294117647);
 }
 .cardControls--plans {
   border: 0.1rem solid #e2ebeb;
@@ -443,6 +444,75 @@ button {
 .pages {
   background-color: white;
   padding: 1.5rem;
+}
+
+.payments {
+  display: grid;
+  grid-template-columns: 21rem auto;
+}
+.payments__cardList {
+  background-color: #eef8ef;
+  border: 0.1rem solid rgba(143, 209, 125, 0.3294117647);
+}
+.payments__cardList--card {
+  display: grid;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  background-color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.payments__cardList--card::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  right: -30px;
+  bottom: -30px;
+}
+.payments__cardList--card:hover, .payments__cardList--card:active {
+  background-color: #023535;
+}
+.payments__cardList--card:hover .payments__cardList--card-title, .payments__cardList--card:hover .payments__cardList--card-bank, .payments__cardList--card:hover .payments__cardList--card-amount, .payments__cardList--card:hover .payments__cardList--card-cardNum, .payments__cardList--card:hover .payments__cardList--card-exp, .payments__cardList--card:hover .payments__cardList--card-cvv, .payments__cardList--card:active .payments__cardList--card-title, .payments__cardList--card:active .payments__cardList--card-bank, .payments__cardList--card:active .payments__cardList--card-amount, .payments__cardList--card:active .payments__cardList--card-cardNum, .payments__cardList--card:active .payments__cardList--card-exp, .payments__cardList--card:active .payments__cardList--card-cvv {
+  color: white;
+}
+.payments__cardList--card:hover .payments__cardList--card-logo > g path:last-child, .payments__cardList--card:active .payments__cardList--card-logo > g path:last-child {
+  fill: #9ae287;
+}
+.payments__cardList--card:hover .payments__cardList--card-accountType, .payments__cardList--card:hover .payments__cardList--card-cardNumText, .payments__cardList--card:hover .payments__cardList--card-expText, .payments__cardList--card:hover .payments__cardList--card-cvvText, .payments__cardList--card:active .payments__cardList--card-accountType, .payments__cardList--card:active .payments__cardList--card-cardNumText, .payments__cardList--card:active .payments__cardList--card-expText, .payments__cardList--card:active .payments__cardList--card-cvvText {
+  color: rgb(227, 227, 227);
+}
+.payments__cardList--card-title {
+  font-size: small;
+  font-weight: 500;
+}
+.payments__cardList--card-logo {
+  width: 2.1rem;
+  height: 2.1rem;
+}
+.payments__cardList--card-logo > g path:first-child {
+  fill: transparent;
+}
+.payments__cardList--card-logo > g path:last-child {
+  fill: #023535;
+}
+.payments__cardList--card-bank {
+  font-size: medium;
+  font-weight: bold;
+}
+.payments__cardList--card-amount {
+  font-size: 1.41rem;
+  font-weight: 700;
+}
+.payments__cardList--card-accountType {
+  color: rgb(73, 73, 73);
+  font-weight: 500;
+}
+.payments__cardList--card-cardNumText, .payments__cardList--card-expText, .payments__cardList--card-cvvText {
+  font-size: 0.7rem;
+  color: rgb(93, 93, 93);
 }
 
 .plans__header {

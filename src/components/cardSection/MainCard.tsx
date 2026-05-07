@@ -1,6 +1,6 @@
 import { Nfc } from "lucide-react"
 
-export default function Card() {
+export default function MainCard() {
   return (
     <div className="creditCard">
       <span className="fingerSpace"></span>

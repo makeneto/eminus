@@ -6,6 +6,7 @@
       display: flex;
       align-items: center;
       border-radius: v.$borderRadius;
+      border: v.$lightGreenBorder;
       
       &--cards {
             background-color: v.$light-green;
@@ -13,7 +14,7 @@
             
             & button {
                   &:not(:last-child) {
-                        border-right: .1rem solid white;
+                        border-right: .1rem solid #8fd17d54;
                   }
             }
       }
