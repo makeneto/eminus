@@ -1,14 +1,14 @@
 import Frame from "../ui/Frame"
 import FrameHeader from "../ui/FrameHeader"
-import SelectTime from "../ui/SelectFilter"
+import SelectFilter from "../ui/SelectFilter"
 import { ChartBarStacked } from "./CashflowChart"
 
 export default function CashflowSection() {
   return (
     <Frame>
-      <div className="h-[20rem]">
+      <div className="h-80">
         <FrameHeader title="Cashflow">
-          <SelectTime group={["This Year", "Last Year", "2024", "2023"]} />
+          <SelectFilter group={["This Year", "Last Year", "2024", "2023"]} />
         </FrameHeader>
         <ChartBarStacked />
       </div>

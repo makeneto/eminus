@@ -3,7 +3,7 @@ import { Nfc } from "lucide-react"
 export default function MainCard() {
   return (
     <div className="creditCard">
-      <span className="fingerSpace"></span>
+      <span className="fingerSpace bg-white" />
       <div className="cardHeader">
         <div className="logo">
           <img src="/eminus-dark-logo.svg" alt="Logo" />
@@ -18,7 +18,9 @@ export default function MainCard() {
       <div className="cardFooter">
         <div>
           <span>Balance Amount</span>
-          <h1><span>AOA</span> 1 500 000</h1>
+          <h1>
+            <span>AOA</span> 1 500 000
+          </h1>
         </div>
 
         <div className="cardInfo">

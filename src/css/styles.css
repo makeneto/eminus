@@ -222,11 +222,11 @@ button {
   right: -30px;
   bottom: -30px;
 }
-.creditCard .fingerSpace {
+
+.fingerSpace {
   position: absolute;
   width: 1.4rem;
   height: 3rem;
-  background-color: white;
   border-radius: 50%;
   bottom: 15%;
   right: -5%;
@@ -449,6 +449,7 @@ button {
 .payments {
   display: grid;
   grid-template-columns: 21rem auto;
+  gap: 0.98rem;
 }
 .payments__cardList {
   background-color: #eef8ef;
@@ -461,6 +462,8 @@ button {
   background-color: white;
   border-radius: 1rem;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 .payments__cardList--card::after {
   content: "";
@@ -481,10 +484,11 @@ button {
 .payments__cardList--card:hover .payments__cardList--card-logo > g path:last-child, .payments__cardList--card:active .payments__cardList--card-logo > g path:last-child {
   fill: #9ae287;
 }
-.payments__cardList--card:hover .payments__cardList--card-accountType, .payments__cardList--card:hover .payments__cardList--card-cardNumText, .payments__cardList--card:hover .payments__cardList--card-expText, .payments__cardList--card:hover .payments__cardList--card-cvvText, .payments__cardList--card:active .payments__cardList--card-accountType, .payments__cardList--card:active .payments__cardList--card-cardNumText, .payments__cardList--card:active .payments__cardList--card-expText, .payments__cardList--card:active .payments__cardList--card-cvvText {
+.payments__cardList--card:hover .payments__cardList--card-nfc, .payments__cardList--card:hover .payments__cardList--card-cardNumText, .payments__cardList--card:hover .payments__cardList--card-expText, .payments__cardList--card:hover .payments__cardList--card-cvvText, .payments__cardList--card:active .payments__cardList--card-nfc, .payments__cardList--card:active .payments__cardList--card-cardNumText, .payments__cardList--card:active .payments__cardList--card-expText, .payments__cardList--card:active .payments__cardList--card-cvvText {
   color: rgb(227, 227, 227);
 }
 .payments__cardList--card-title {
+  width: 55%;
   font-size: small;
   font-weight: 500;
 }
@@ -506,13 +510,22 @@ button {
   font-size: 1.41rem;
   font-weight: 700;
 }
-.payments__cardList--card-accountType {
+.payments__cardList--card-nfc {
   color: rgb(73, 73, 73);
   font-weight: 500;
 }
 .payments__cardList--card-cardNumText, .payments__cardList--card-expText, .payments__cardList--card-cvvText {
   font-size: 0.7rem;
   color: rgb(93, 93, 93);
+}
+.payments__content {
+  display: grid;
+  gap: 0.98rem;
+}
+.payments__content__top {
+  display: grid;
+  gap: 0.98rem;
+  grid-template-columns: 1fr 2fr;
 }
 
 .plans__header {

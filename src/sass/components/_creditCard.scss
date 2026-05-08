@@ -29,18 +29,16 @@
     right: -30px;
     bottom: -30px;
   }
-
-  & .fingerSpace {
-    position: absolute;
-    width: 1.4rem;
-    height: 3rem;
-    background-color: white;
-    border-radius: 50%;
-    bottom: 15%;
-    right: -5%;
-  }
 }
 
+.fingerSpace {
+  position: absolute;
+  width: 1.4rem;
+  height: 3rem;
+  border-radius: 50%;
+  bottom: 15%;
+  right: -5%;
+}
 .cardHeader {
   display: flex;
   justify-content: space-between;

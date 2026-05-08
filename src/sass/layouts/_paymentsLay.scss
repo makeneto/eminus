@@ -3,6 +3,7 @@
 .payments {
       display: grid;
       grid-template-columns: 21rem auto;
+      gap: v.$spacing;
 
       &__cardList {
             background-color: v.$light-green;
@@ -16,6 +17,9 @@
                   background-color: white;
                   border-radius: 1rem;
                   cursor: pointer;
+
+                  position: relative;
+                  overflow: hidden;
 
                   &::after {
                         content: "";
@@ -50,7 +54,7 @@
                                     }
                               }
 
-                              &-accountType,
+                              &-nfc,
                               &-cardNumText,
                               &-expText,
                               &-cvvText {
@@ -60,6 +64,7 @@
                   }
                   
                   &-title {
+                        width: 55%;
                         font-size: small;
                         font-weight: 500;
                   }
@@ -88,7 +93,7 @@
                         font-weight: 700;
                   }
 
-                  &-accountType {
+                  &-nfc {
                         color: rgb(73, 73, 73);
                         font-weight: 500;
                   }
@@ -100,5 +105,16 @@
                         color: rgb(93, 93, 93);
                   }
             }
+      }
+
+      &__content {
+            display: grid;
+            gap: v.$spacing;
+
+            &__top {
+                  display: grid;
+                  gap: v.$spacing;
+                  grid-template-columns: 1fr 2fr;
+            }    
       }
 }
