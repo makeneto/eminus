@@ -1,7 +1,13 @@
+import { formatCardNumber } from "@/utils/formatCardNum"
+import CardControls from "../cardSection/CardControls"
 import CardsSection from "../payments/CardsSection"
 import Frame from "../ui/Frame"
 import FrameHeader from "../ui/FrameHeader"
 import SelectFilter from "../ui/SelectFilter"
+import SettingButton from "../ui/SettingButton"
+import SlicedProgressBar from "../ui/SlicedProgressBar"
+import TransactionTable from "../ui/TransactionTable"
+import { transactionsData } from "@/constants/transactionsData"
 
 export default function PaymentsLayout() {
   return (
@@ -11,10 +17,52 @@ export default function PaymentsLayout() {
       <div className="payments__content">
         <div className="payments__content__top">
           <aside>
-            <Frame>Card Controls</Frame>
+            <Frame>
+              <CardControls type="cards" />
+
+              <div className="grid gap-6">
+                <div className="grid gap-1">
+                  <p className="text-muted-foreground text-xs">Card Number</p>
+                  <p className="font-semibold text-sm">
+                    {formatCardNumber(4322377834987498)}
+                  </p>
+                </div>
+
+                <div className="w-[75%] flex items-center justify-between">
+                  <div className="grid gap-1">
+                    <p className="text-muted-foreground text-xs">Expiry Date</p>
+                    <p className="font-semibold text-sm">05/27</p>
+                  </div>
+
+                  <div className="grid gap-1">
+                    <p className="text-muted-foreground text-xs">CVV</p>
+                    <p className="font-semibold text-sm">411</p>
+                  </div>
+
+                  <div className="grid gap-1">
+                    <p className="text-muted-foreground text-xs">Status</p>
+                    <p className="status-card text-sm">Active</p>
+                  </div>
+                </div>
+              </div>
+            </Frame>
 
             <Frame>
-              <FrameHeader title="Spending Limits" />
+              <FrameHeader title="Spending Limits">
+                <SettingButton />
+              </FrameHeader>
+
+              <SlicedProgressBar value={30} className="mt-2" />
+              <div className="flex items-center justify-between">
+                <div className="flex items-baseline gap-2">
+                  <p className="text-sm font-semibold">10 000 kz</p>
+                  <span className="text-xs font-medium text-muted-foreground">
+                    spent of 100 000 kz
+                  </span>
+                </div>
+
+                <p className="text-sm font-semibold">30%</p>
+              </div>
             </Frame>
           </aside>
 
@@ -28,11 +76,15 @@ export default function PaymentsLayout() {
         </div>
 
         <Frame>
-          <FrameHeader title="Transactions Table">
-            <SelectFilter
-              group={["This Month", "Last Month", "February", "January"]}
-            />
-          </FrameHeader>
+          <div className="transaction-table h-112 flex flex-col">
+            <FrameHeader title="Recent Transactions">
+              <SelectFilter
+                group={["This Month", "Last Month", "February", "January"]}
+              />
+            </FrameHeader>
+
+            <TransactionTable transactions={transactionsData} />
+          </div>
         </Frame>
       </div>
     </main>

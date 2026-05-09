@@ -111,10 +111,23 @@
             display: grid;
             gap: v.$spacing;
 
+            & aside {
+                  display: flex;
+                  flex-direction: column;
+                  gap: v.$spacing;
+            }
+
             &__top {
                   display: grid;
                   gap: v.$spacing;
-                  grid-template-columns: 1fr 2fr;
+                  grid-template-columns: 27% auto;;
             }    
       }
+}
+
+.status-card {
+      background-color: v.$hovered-dark-green;
+      color: rgb(225, 255, 225);
+      border-radius: .3rem;
+      padding: .1rem .5rem;
 }

@@ -6,7 +6,7 @@ import TransactionTable from "../ui/TransactionTable"
 
 export default function TransactionsPlans() {
   return (
-    <Frame className="transaction-table h-[17rem] flex flex-col">
+    <Frame className="transaction-table h-68 flex flex-col">
       <FrameHeader title="Transactions">
         <SelectFilter
           group={["This Month", "Last Month", "February", "January"]}

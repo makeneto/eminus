@@ -52,6 +52,52 @@ button {
   font-size: 1rem;
 }
 
+.progressBar {
+  width: 100%;
+  overflow: hidden;
+}
+.progressBar--sm {
+  height: 0.4rem;
+  border-radius: 1rem;
+  background-color: #9ae287;
+}
+.progressBar--sm div {
+  border-radius: 1rem;
+}
+.progressBar--lg {
+  height: 3rem;
+  border-radius: 0.56rem;
+  background-color: #9ae287;
+}
+.progressBar div {
+  transition: all 0.2s ease-in;
+  background-color: #023535;
+  height: 100%;
+}
+
+.SlicedProgressBar {
+  width: 100%;
+  overflow: hidden;
+  display: grid;
+  gap: 0.4rem;
+}
+.SlicedProgressBar div {
+  border-radius: 0.34rem;
+}
+.SlicedProgressBar div:first-child {
+  background-color: #023535;
+}
+.SlicedProgressBar div:last-child {
+  background-color: #9ae287;
+}
+.SlicedProgressBar--sm {
+  height: 1.6rem;
+}
+.SlicedProgressBar--lg {
+  height: 3rem;
+  border-radius: 0.56rem;
+}
+
 .settingButton {
   transition: all 0.2s ease-in;
 }
@@ -296,29 +342,6 @@ button {
   font-weight: 400;
 }
 
-.progressBar {
-  width: 100%;
-  overflow: hidden;
-}
-.progressBar--sm {
-  height: 0.4rem;
-  border-radius: 1rem;
-  background-color: #9ae287;
-}
-.progressBar--sm div {
-  border-radius: 1rem;
-}
-.progressBar--lg {
-  height: 3rem;
-  border-radius: 0.56rem;
-  background-color: #9ae287;
-}
-.progressBar div {
-  transition: all 0.2s ease-in;
-  background-color: #023535;
-  height: 100%;
-}
-
 .dashboard__summary {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -522,10 +545,22 @@ button {
   display: grid;
   gap: 0.98rem;
 }
+.payments__content aside {
+  display: flex;
+  flex-direction: column;
+  gap: 0.98rem;
+}
 .payments__content__top {
   display: grid;
   gap: 0.98rem;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 27% auto;
+}
+
+.status-card {
+  background-color: #044e4e;
+  color: rgb(225, 255, 225);
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.5rem;
 }
 
 .plans__header {

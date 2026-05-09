@@ -1,0 +1,58 @@
+@use '../../base/variables' as v;
+
+.progressBar {
+      width: 100%;
+      overflow: hidden;
+
+      &--sm {
+            height: .4rem;
+            border-radius: v.$borderRadius;
+            background-color: v.$primary-green;
+
+            & div {
+                  border-radius: v.$borderRadius;
+            }
+      }
+
+      &--lg {
+            height: 3rem;
+            border-radius: .56rem;
+            background-color: v.$primary-green;
+      }
+
+      & div {
+            transition: all .2s ease-in;
+            background-color: v.$dark-green;
+            height: 100%;
+      }
+}
+
+.SlicedProgressBar {
+      width: 100%;
+      overflow: hidden;
+
+      display: grid;
+      gap: 0.4rem;
+      
+      & div {
+            border-radius: .34rem;
+      }
+
+      & div:first-child {
+            background-color: v.$dark-green;
+      }
+
+      & div:last-child {
+            background-color: v.$primary-green;
+      }
+
+      &--sm {
+            height: 1.6rem;      
+      }
+
+      &--lg {
+            height: 3rem;
+            border-radius: .56rem;
+      }
+
+}

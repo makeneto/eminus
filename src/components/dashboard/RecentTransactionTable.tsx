@@ -1,15 +1,15 @@
 import { transactionsData } from "@/constants/transactionsData"
 import Frame from "../ui/Frame"
 import FrameHeader from "../ui/FrameHeader"
-import SelectTime from "../ui/SelectFilter"
 import TransactionTable from "../ui/TransactionTable"
+import SelectFilter from "../ui/SelectFilter"
 
 export default function RecentTransactionTable() {
   return (
     <Frame>
-      <div className="transaction-table h-[20rem] flex flex-col">
+      <div className="transaction-table h-80 flex flex-col">
         <FrameHeader title="Recent Transactions">
-          <SelectTime
+          <SelectFilter
             group={["This Month", "Last Month", "February", "January"]}
           />
         </FrameHeader>

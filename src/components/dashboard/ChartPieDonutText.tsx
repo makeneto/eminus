@@ -44,7 +44,7 @@ export function ChartPieDonutText() {
     <CardContent className="grid md:flex-row items-center gap-4">
       <ChartContainer
         config={chartConfig}
-        className="w-full aspect-square min-w-[200px] min-h-[200px]"
+        className="w-full aspect-square min-w-50 min-h-50"
       >
         <PieChart>
           <ChartTooltip

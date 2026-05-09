@@ -37,7 +37,7 @@ export function ChartBarStacked() {
         <span className="text-gray-500 text-sm">Total Balance</span>
         <h1 className="font-bold text-xl">{amount.toLocaleString()} kz</h1>
       </header>
-      <ChartContainer config={chartConfig} className="w-full h-[220px]">
+      <ChartContainer config={chartConfig} className="w-full h-55">
         <BarChart accessibilityLayer data={chartData}>
           <CartesianGrid vertical={true} />
           <XAxis

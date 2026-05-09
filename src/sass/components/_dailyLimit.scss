@@ -20,30 +20,3 @@
             }
       }
 }
-
-.progressBar {
-      width: 100%;
-      overflow: hidden;
-
-      &--sm {
-            height: .4rem;
-            border-radius: v.$borderRadius;
-            background-color: v.$primary-green;
-
-            & div {
-                  border-radius: v.$borderRadius;
-            }
-      }
-
-      &--lg {
-            height: 3rem;
-            border-radius: .56rem;
-            background-color: v.$primary-green;
-      }
-
-      & div {
-            transition: all .2s ease-in;
-            background-color: v.$dark-green;
-            height: 100%;
-      }
-}
