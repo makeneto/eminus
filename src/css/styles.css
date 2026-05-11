@@ -498,16 +498,16 @@ button {
   right: -30px;
   bottom: -30px;
 }
-.payments__cardList--card:hover, .payments__cardList--card:active {
+.payments__cardList--card:hover, .payments__cardList--card--active {
   background-color: #023535;
 }
-.payments__cardList--card:hover .payments__cardList--card-title, .payments__cardList--card:hover .payments__cardList--card-bank, .payments__cardList--card:hover .payments__cardList--card-amount, .payments__cardList--card:hover .payments__cardList--card-cardNum, .payments__cardList--card:hover .payments__cardList--card-exp, .payments__cardList--card:hover .payments__cardList--card-cvv, .payments__cardList--card:active .payments__cardList--card-title, .payments__cardList--card:active .payments__cardList--card-bank, .payments__cardList--card:active .payments__cardList--card-amount, .payments__cardList--card:active .payments__cardList--card-cardNum, .payments__cardList--card:active .payments__cardList--card-exp, .payments__cardList--card:active .payments__cardList--card-cvv {
+.payments__cardList--card:hover .payments__cardList--card-title, .payments__cardList--card:hover .payments__cardList--card-bank, .payments__cardList--card:hover .payments__cardList--card-amount, .payments__cardList--card:hover .payments__cardList--card-cardNum, .payments__cardList--card:hover .payments__cardList--card-exp, .payments__cardList--card:hover .payments__cardList--card-cvv, .payments__cardList--card--active .payments__cardList--card-title, .payments__cardList--card--active .payments__cardList--card-bank, .payments__cardList--card--active .payments__cardList--card-amount, .payments__cardList--card--active .payments__cardList--card-cardNum, .payments__cardList--card--active .payments__cardList--card-exp, .payments__cardList--card--active .payments__cardList--card-cvv {
   color: white;
 }
-.payments__cardList--card:hover .payments__cardList--card-logo > g path:last-child, .payments__cardList--card:active .payments__cardList--card-logo > g path:last-child {
+.payments__cardList--card:hover .payments__cardList--card-logo > g path:last-child, .payments__cardList--card--active .payments__cardList--card-logo > g path:last-child {
   fill: #9ae287;
 }
-.payments__cardList--card:hover .payments__cardList--card-nfc, .payments__cardList--card:hover .payments__cardList--card-cardNumText, .payments__cardList--card:hover .payments__cardList--card-expText, .payments__cardList--card:hover .payments__cardList--card-cvvText, .payments__cardList--card:active .payments__cardList--card-nfc, .payments__cardList--card:active .payments__cardList--card-cardNumText, .payments__cardList--card:active .payments__cardList--card-expText, .payments__cardList--card:active .payments__cardList--card-cvvText {
+.payments__cardList--card:hover .payments__cardList--card-nfc, .payments__cardList--card:hover .payments__cardList--card-cardNumText, .payments__cardList--card:hover .payments__cardList--card-expText, .payments__cardList--card:hover .payments__cardList--card-cvvText, .payments__cardList--card--active .payments__cardList--card-nfc, .payments__cardList--card--active .payments__cardList--card-cardNumText, .payments__cardList--card--active .payments__cardList--card-expText, .payments__cardList--card--active .payments__cardList--card-cvvText {
   color: rgb(227, 227, 227);
 }
 .payments__cardList--card-title {

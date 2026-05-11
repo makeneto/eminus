@@ -33,7 +33,7 @@
                   }
 
                   &:hover,
-                  &:active {
+                  &--active {
                         background-color: v.$dark-green;
 
                         .payments__cardList--card {

@@ -9,6 +9,11 @@ import {
   type ChartConfig,
 } from "@/components/ui/chart"
 
+interface ChartBarStackedProps {
+  getSummary?: boolean
+  height: string
+}
+
 const chartData = [
   { month: "January", income: 186000, expense: 80000 },
   { month: "February", income: 305000, expense: 200000 },
@@ -28,16 +33,22 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-export function ChartBarStacked() {
+export function ChartBarStacked({
+  getSummary = true,
+  height,
+}: ChartBarStackedProps) {
   const amount = 761450
 
   return (
     <div className="pt-4.5 grid gap-4">
-      <header>
-        <span className="text-gray-500 text-sm">Total Balance</span>
-        <h1 className="font-bold text-xl">{amount.toLocaleString()} kz</h1>
-      </header>
-      <ChartContainer config={chartConfig} className="w-full h-55">
+      {getSummary && (
+        <header>
+          <span className="text-gray-500 text-sm">Total Balance</span>
+          <h1 className="font-bold text-xl">{amount.toLocaleString()} kz</h1>
+        </header>
+      )}
+
+      <ChartContainer config={chartConfig} className={`w-full ${height}`}>
         <BarChart accessibilityLayer data={chartData}>
           <CartesianGrid vertical={true} />
           <XAxis

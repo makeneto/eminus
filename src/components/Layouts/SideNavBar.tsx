@@ -3,10 +3,12 @@ import {
   ChartNoAxesCombined,
   CreditCard,
   Leaf,
+  Lightbulb,
+  Mail,
   TrendingUp,
 } from "lucide-react"
 import { NavLink } from "react-router-dom"
-import NavLogo from "./NavLogo"
+import NavLogo from "../sideNavbar/NavLogo"
 
 export default function SideNavBar() {
   return (
@@ -53,6 +55,22 @@ export default function SideNavBar() {
         >
           <TrendingUp />
           Investments
+        </NavLink>
+        <NavLink
+          to="/inbox"
+          prefetch="intent"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          <Mail />
+          Inbox
+        </NavLink>
+        <NavLink
+          to="/insights"
+          prefetch="intent"
+          className={({ isActive }) => (isActive ? "active" : "")}
+        >
+          <Lightbulb />
+          Insights
         </NavLink>
       </nav>
     </aside>

@@ -8,11 +8,23 @@ import SettingButton from "../ui/SettingButton"
 import SlicedProgressBar from "../ui/SlicedProgressBar"
 import TransactionTable from "../ui/TransactionTable"
 import { transactionsData } from "@/constants/transactionsData"
+import { ChartBarStacked } from "../ui/CashflowChart"
+import { useMemo, useState } from "react"
+import { cards } from "@/constants/Cards"
 
 export default function PaymentsLayout() {
+  const [selectedCardId, setSelectedCardId] = useState("card_01")
+  const selectedCard = useMemo(
+    () => cards.find((card) => card.id === selectedCardId) ?? cards[0],
+    [selectedCardId],
+  )
+
   return (
     <main className="payments">
-      <CardsSection />
+      <CardsSection
+        selectedCardId={selectedCardId}
+        onSelectCard={setSelectedCardId}
+      />
 
       <div className="payments__content">
         <div className="payments__content__top">
@@ -24,19 +36,19 @@ export default function PaymentsLayout() {
                 <div className="grid gap-1">
                   <p className="text-muted-foreground text-xs">Card Number</p>
                   <p className="font-semibold text-sm">
-                    {formatCardNumber(4322377834987498)}
+                    {formatCardNumber(selectedCard.cardNum)}
                   </p>
                 </div>
 
                 <div className="w-[75%] flex items-center justify-between">
                   <div className="grid gap-1">
                     <p className="text-muted-foreground text-xs">Expiry Date</p>
-                    <p className="font-semibold text-sm">05/27</p>
+                    <p className="font-semibold text-sm">{selectedCard.exp}</p>
                   </div>
 
                   <div className="grid gap-1">
                     <p className="text-muted-foreground text-xs">CVV</p>
-                    <p className="font-semibold text-sm">411</p>
+                    <p className="font-semibold text-sm">{selectedCard.cvv}</p>
                   </div>
 
                   <div className="grid gap-1">
@@ -72,6 +84,8 @@ export default function PaymentsLayout() {
                 group={["This Year", "Last Year", "2024", "2023"]}
               />
             </FrameHeader>
+
+            <ChartBarStacked getSummary={false} height="h-70" />
           </Frame>
         </div>
 

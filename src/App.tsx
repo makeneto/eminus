@@ -5,6 +5,8 @@ import Transactions from "./pages/Transactions"
 import Investments from "./pages/Investments"
 import Plans from "./pages/Plans"
 import Payments from "./pages/Payments"
+import Inbox from "./pages/Inbox"
+import Insights from "./pages/Insights"
 
 export default function App() {
   return (
@@ -15,6 +17,8 @@ export default function App() {
         <Route path="/transactions" element={<Transactions />} />
         <Route path="/plans" element={<Plans />} />
         <Route path="/investments" element={<Investments />} />
+        <Route path="/inbox" element={<Inbox />} />
+        <Route path="/insights" element={<Insights />} />
       </Routes>
     </div>
   )
