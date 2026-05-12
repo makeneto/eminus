@@ -1,26 +1,21 @@
 import ChatBoxButton from "./ChatBoxButton"
 import NotificationsButton from "./NotificationsButton"
-import Profile from "./Profile"
 import TodaysDate from "./TodaysDate"
+import SettingButton from "./SettingButton"
 
-interface HeaderProps {
-  title: string
-}
-
-export default function Header({ title }: HeaderProps) {
+export default function Header({ title }: { title: string }) {
   return (
     <header className="headerPage">
       <h1>{title}</h1>
 
-      <div className="flex gap-8 items-center">
+      <div className="flex gap-10 items-center">
         <TodaysDate />
 
-        <div className="flex gap-3.5 items-center">
+        <div className="flex gap-5 items-center">
           <ChatBoxButton />
           <NotificationsButton />
+          <SettingButton />
         </div>
-
-        <Profile />
       </div>
     </header>
   )

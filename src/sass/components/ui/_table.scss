@@ -69,6 +69,14 @@
                         .amount {
                               font-weight: 500;
                               color: #1f2937;
+
+                              &--positive {
+                                    color: #33a710;
+                              }
+
+                              &--negative {
+                                    color: #e41401;
+                              }
                         }
 
                         .note {
@@ -105,6 +113,10 @@
                               }
                         }
                   }
+            }
+
+            .selected {
+                  background: #f9fafb;
             }
       }
 }

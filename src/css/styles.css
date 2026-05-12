@@ -8,6 +8,9 @@ body {
 button {
   cursor: pointer;
 }
+button:disabled {
+  cursor: not-allowed;
+}
 
 .badge {
   width: fit-content;
@@ -32,6 +35,12 @@ button {
 }
 .btn--primary:hover {
   background-color: #044e4e;
+}
+.btn--simple svg {
+  transition: color 0.1s ease-in;
+}
+.btn--simple:hover svg {
+  color: #044e4e;
 }
 
 .frame {
@@ -160,6 +169,12 @@ button {
   font-weight: 500;
   color: #1f2937;
 }
+.transaction-table table tbody tr .amount--positive {
+  color: #33a710;
+}
+.transaction-table table tbody tr .amount--negative {
+  color: #e41401;
+}
 .transaction-table table tbody tr .note {
   color: #6b7280;
 }
@@ -184,6 +199,9 @@ button {
 .transaction-table table tbody tr .status.default span {
   background: #f3f4f6;
   color: #4b5563;
+}
+.transaction-table table .selected {
+  background: #f9fafb;
 }
 
 .cardControls {
@@ -555,6 +573,22 @@ button {
   gap: 0.98rem;
   grid-template-columns: 27% auto;
 }
+.payments__icon {
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+}
+.payments__icon--positive {
+  background-color: #eef8ef;
+}
+.payments__icon--positive svg {
+  stroke: #023535;
+}
+.payments__icon--negative {
+  background-color: rgba(214, 18, 0, 0.0901960784);
+}
+.payments__icon--negative svg {
+  stroke: #A60E00;
+}
 
 .status-card {
   background-color: #044e4e;
@@ -657,6 +691,43 @@ button {
   display: grid;
   grid-template-columns: 40% 95%;
   gap: 1.5rem;
+}
+
+.transactions {
+  display: grid;
+  grid-template-columns: 76% auto;
+}
+.transactions__searchInput {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 0.1rem solid #e2ebeb;
+  background-color: rgba(202, 202, 202, 0.0862745098);
+  padding: 0.34rem 0.7rem;
+  border-radius: 2rem;
+}
+.transactions__searchInput input {
+  width: 12rem;
+  outline: none;
+  font-size: 0.9rem;
+}
+.transactions__searchInput input::placeholder {
+  font-size: 0.9rem;
+}
+.transactions__fileDownload {
+  background-color: #adff2f;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.4rem;
+  transition: all 0.1s ease-in;
+}
+.transactions__fileDownload:hover {
+  background-color: #a1ef2c;
+}
+.transactions__fileDownload:disabled {
+  background-color: rgb(234, 234, 234);
+}
+.transactions__fileDownload:disabled svg {
+  stroke: rgb(151, 151, 151);
 }
 
 .no-scroll-bar::-webkit-scrollbar {

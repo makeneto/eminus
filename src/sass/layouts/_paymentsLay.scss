@@ -123,6 +123,27 @@
                   grid-template-columns: 27% auto;;
             }    
       }
+
+      &__icon {
+            border-radius: .6rem;
+            padding: .5rem;
+
+            &--positive {
+                  background-color: v.$light-green;
+
+                  & svg {
+                        stroke: v.$dark-green;
+                  }
+            }
+
+            &--negative {
+                  background-color: #d6120017;
+
+                  & svg {
+                        stroke: #A60E00;
+                  }
+            }
+      }
 }
 
 .status-card {

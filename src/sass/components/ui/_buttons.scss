@@ -18,4 +18,16 @@
                   background-color: v.$hovered-dark-green;
             }
       }
+
+      &--simple {
+            & svg {
+                  transition: color .1s ease-in;
+            }
+      
+            &:hover {
+                  svg {
+                        color: v.$hovered-dark-green;
+                  }
+            }
+      }
 }

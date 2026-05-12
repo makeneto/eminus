@@ -1,0 +1,47 @@
+@use '../base/variables' as v;
+
+.transactions {
+      display: grid;
+      grid-template-columns: 76% auto;
+
+      &__searchInput {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            border: v.$lightGreyBorder;
+            background-color: #cacaca16;
+
+            padding: .34rem .7rem;
+            border-radius: 2rem;
+
+            & input {
+                  width: 12rem;
+                  outline: none;
+                  font-size: .9rem;
+
+                  &::placeholder {
+                        font-size: .9rem;
+                  }
+            }
+      }
+
+      &__fileDownload {
+            background-color: #adff2f;
+            padding: .4rem .6rem;
+            border-radius: .4rem;
+
+            transition: all .1s ease-in;
+
+            &:hover {
+                  background-color: #a1ef2c;
+            }
+
+            &:disabled {
+                  background-color: rgb(234, 234, 234);
+
+                  & svg {
+                        stroke: rgb(151, 151, 151);
+                  }
+            }
+      }
+}

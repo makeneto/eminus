@@ -1,0 +1,58 @@
+import { transactionsData } from "@/constants/transactionsData"
+import TransactionTable from "../ui/TransactionTable"
+import Frame from "../ui/Frame"
+import FrameHeader from "../ui/FrameHeader"
+import SelectFilter from "../ui/SelectFilter"
+import { Download, Search } from "lucide-react"
+import { useSelectTransaction } from "@/hooks/useSelectTransaction"
+
+export default function TransactionsLayout() {
+  const { selected, handleRowClick, handleDeselectAll } = useSelectTransaction()
+
+  return (
+    <main className="transactions">
+      <Frame>
+        <div className="transaction-table h-80 flex flex-col">
+          <FrameHeader title="Recent Transactions">
+            <div className="flex gap-8 items-center">
+              <div className="transactions__searchInput">
+                <Search size={14} />
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  name="itransaction"
+                  id="transaction"
+                  autoComplete="off"
+                />
+              </div>
+
+              <div className="flex gap-3 items-center">
+                <SelectFilter
+                  group={["All Status", "Completed", "Pending", "Failed"]}
+                />
+                <SelectFilter
+                  group={["This Month", "Last Month", "February", "January"]}
+                />
+
+                <button
+                  disabled={!selected}
+                  className="transactions__fileDownload"
+                >
+                  <Download size={14} />
+                </button>
+              </div>
+            </div>
+          </FrameHeader>
+
+          <TransactionTable
+            transactions={transactionsData}
+            type="full-transaction"
+            selected={selected}
+            handleRowClick={handleRowClick}
+            handleDeselectAll={handleDeselectAll}
+          />
+        </div>
+      </Frame>
+    </main>
+  )
+}
