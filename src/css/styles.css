@@ -117,7 +117,7 @@ button:disabled {
 .transaction-table {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 .transaction-table .table-wrapper {
   overflow-x: auto;
@@ -462,7 +462,7 @@ button:disabled {
   top: 0;
   background-color: white;
   z-index: 10;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 .headerPage h1 {
   font-weight: 600;
@@ -587,7 +587,7 @@ button:disabled {
   background-color: rgba(214, 18, 0, 0.0901960784);
 }
 .payments__icon--negative svg {
-  stroke: #A60E00;
+  stroke: #cb1504;
 }
 
 .status-card {
@@ -695,7 +695,55 @@ button:disabled {
 
 .transactions {
   display: grid;
-  grid-template-columns: 76% auto;
+  grid-template-columns: 79% auto;
+  gap: 0.98rem;
+}
+.transactions__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.98rem;
+}
+.transactions__content--summaryCard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.98rem;
+}
+.transactions__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 0.98rem;
+}
+.transactions__aside--resumeButtons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.98rem;
+}
+.transactions__aside--resumeButtons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-block: 0.5rem;
+  border-radius: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.1s ease-in;
+}
+.transactions__aside--resumeButtons button:first-child {
+  background-color: #023535;
+  color: white;
+}
+.transactions__aside--resumeButtons button:first-child:hover {
+  background-color: transparent;
+  color: #023535;
+  border: 0.1rem solid #e2ebeb;
+}
+.transactions__aside--resumeButtons button:last-child {
+  background-color: #eef8ef;
+  border: 0.1rem solid rgba(143, 209, 125, 0.3294117647);
+}
+.transactions__aside--resumeButtons button:last-child:hover {
+  background-color: transparent;
 }
 .transactions__searchInput {
   display: flex;
@@ -715,13 +763,19 @@ button:disabled {
   font-size: 0.9rem;
 }
 .transactions__fileDownload {
-  background-color: #adff2f;
+  background-color: #eef8ef;
+  border: 0.1rem solid rgba(143, 209, 125, 0.3294117647);
   padding: 0.4rem 0.6rem;
   border-radius: 0.4rem;
+}
+.transactions__fileDownload:hover {
+  background-color: transparent;
+}
+.transactions__fileDownload, .transactions__fileDownload svg {
   transition: all 0.1s ease-in;
 }
 .transactions__fileDownload:hover {
-  background-color: #a1ef2c;
+  background-color: transparent;
 }
 .transactions__fileDownload:disabled {
   background-color: rgb(234, 234, 234);

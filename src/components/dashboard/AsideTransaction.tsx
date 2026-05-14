@@ -4,7 +4,11 @@ import FrameHeader from "../ui/FrameHeader"
 import SelectFilter from "../ui/SelectFilter"
 import { RecentActivity } from "./RecentActivity"
 
-export default function AsideTransaction() {
+export default function AsideTransaction({
+  recentTransactions,
+}: {
+  recentTransactions: number
+}) {
   return (
     <section className="aside-transaction">
       <Frame>
@@ -18,7 +22,7 @@ export default function AsideTransaction() {
 
       <Frame>
         <FrameHeader title="Recent Activity" />
-        <RecentActivity />
+        <RecentActivity size={recentTransactions} />
       </Frame>
     </section>
   )

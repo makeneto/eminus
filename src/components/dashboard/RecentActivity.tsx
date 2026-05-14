@@ -1,52 +1,11 @@
-const activities = [
-  {
-    day: "Today",
-    items: [
-      {
-        name: "Jamie Smith",
-        action: "updated account settings",
-        time: "16:05",
-        avatar: "https://i.pravatar.cc/40?img=1",
-      },
-      {
-        name: "Alex Johnson",
-        action: "logged in",
-        time: "13:05",
-        avatar: "https://i.pravatar.cc/40?img=2",
-      },
-      {
-        name: "Morgan Lee",
-        action: "added a new savings goal for vacation",
-        time: "02:05",
-        avatar: "https://i.pravatar.cc/40?img=3",
-      },
-    ],
-  },
-  {
-    day: "Yesterday",
-    items: [
-      {
-        name: "Taylor Green",
-        action: "reviewed recent transactions",
-        time: "21:05",
-        avatar: "https://i.pravatar.cc/40?img=4",
-      },
-      {
-        name: "Wilson Baptista",
-        action: "transferred funds to emergency fund",
-        time: "09:05",
-        avatar: "https://i.pravatar.cc/40?img=5",
-      },
-    ],
-  },
-]
+import { activities } from "@/constants/activities"
 
-export function RecentActivity() {
+export function RecentActivity({ size }: { size: number }) {
   return (
     <div className="w-full max-w-md p-3">
       <div
         className="grid gap-6 space-y-5 overflow-y-auto no-scroll-bar"
-        style={{ maxHeight: "10rem" }}
+        style={{ maxHeight: `${size}rem` }}
       >
         {activities.map((group) => (
           <div key={group.day} className="grid gap-3">
@@ -56,7 +15,7 @@ export function RecentActivity() {
               {group.items.map((item, index) => (
                 <div key={index} className="flex items-start gap-3 relative">
                   {index < group.items.length - 1 && (
-                    <div className="absolute left-[0.9rem] top-8 bottom-[-1rem] w-0.5 bg-border" />
+                    <div className="absolute left-[0.9rem] top-8 -bottom-4 w-0.5 bg-border" />
                   )}
 
                   <img

@@ -6,7 +6,6 @@ import "./css/styles.css"
 import "./css/index.css"
 import App from "./App.tsx"
 import SideNavBar from "./components/layouts/SideNavBar.tsx"
-import Footer from "./components/layouts/Footer.tsx"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -15,7 +14,6 @@ createRoot(document.getElementById("root")!).render(
         <SideNavBar />
         <main className="pages">
           <App />
-          <Footer />
         </main>
       </main>
     </BrowserRouter>

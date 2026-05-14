@@ -15,7 +15,8 @@ export default function DashboardLayout() {
           <RecentTransactionTable />
         </div>
       </main>
-      <AsideTransaction />
+
+      <AsideTransaction recentTransactions={12.5} />
     </main>
   )
 }
