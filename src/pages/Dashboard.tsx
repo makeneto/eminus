@@ -1,5 +1,5 @@
 import DashboardLayout from "@/components/layouts/DashBoardLayout"
-import Header from "../components/header/Header"
+import Header from "../components/layouts/Header"
 
 export default function Dashboard() {
   return (

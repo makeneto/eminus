@@ -1,7 +1,7 @@
-import ChatBoxButton from "./ChatBoxButton"
-import NotificationsButton from "./NotificationsButton"
-import TodaysDate from "./TodaysDate"
-import SettingButton from "./SettingButton"
+import ChatBoxButton from "../header/ChatBoxButton"
+import NotificationsButton from "../header/NotificationsButton"
+import TodaysDate from "../header/TodaysDate"
+import Profile from "../header/Profile"
 
 export default function Header({ title }: { title: string }) {
   return (
@@ -14,8 +14,9 @@ export default function Header({ title }: { title: string }) {
         <div className="flex gap-5 items-center">
           <ChatBoxButton />
           <NotificationsButton />
-          <SettingButton />
         </div>
+
+        <Profile />
       </div>
     </header>
   )

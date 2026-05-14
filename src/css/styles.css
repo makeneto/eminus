@@ -388,7 +388,7 @@ button:disabled {
 }
 
 .sideNavBar {
-  padding: 1.5rem 1.5rem 1rem;
+  padding: 1.5rem 1rem 1rem;
 }
 .sideNavBar, .sideNavBar nav {
   flex: 1;
@@ -412,12 +412,9 @@ button:disabled {
   width: 1rem;
   height: 1rem;
 }
-.sideNavBar nav a:hover, .sideNavBar nav a.active {
+.sideNavBar nav a:hover {
   color: #023535;
   background-color: #b0ff9b;
-}
-.sideNavBar nav a.active {
-  font-weight: 500;
 }
 
 .navLogo {
@@ -427,6 +424,52 @@ button:disabled {
 .navLogo img {
   width: auto;
   height: 1.6rem;
+}
+
+.otherLink {
+  display: grid;
+  gap: 0.6rem;
+}
+.otherLink__item {
+  font-size: 0.88rem;
+  border-radius: 10rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-out;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.otherLink__item:hover {
+  color: #023535;
+  background-color: #b0ff9b;
+}
+.otherLink__item svg {
+  width: 1rem;
+  height: 1rem;
+}
+.otherLink__item--redLink {
+  color: #dc2626;
+}
+.otherLink__item--redLink:hover {
+  color: #350202;
+  background-color: #ff9b9b;
+}
+.otherLink__list {
+  padding-left: 0.6rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.activeLink {
+  font-weight: 500;
+}
+.activeLink--default {
+  color: #023535;
+  background-color: #b0ff9b;
+}
+.activeLink--red {
+  color: #350202;
+  background-color: #ff9b9b;
 }
 
 .aside-transaction {

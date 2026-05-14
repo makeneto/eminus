@@ -1,5 +1,5 @@
 import PlansLayout from "@/components/layouts/PlansLayout"
-import Header from "../components/header/Header"
+import Header from "../components/layouts/Header"
 
 export default function Plans() {
   return (

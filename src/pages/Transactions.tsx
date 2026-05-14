@@ -1,5 +1,5 @@
 import TransactionsLayout from "@/components/layouts/TransactionsLayout"
-import Header from "../components/header/Header"
+import Header from "../components/layouts/Header"
 
 export default function Transactions() {
   return (

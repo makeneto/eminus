@@ -8,6 +8,7 @@ import Payments from "./pages/Payments"
 import Inbox from "./pages/Inbox"
 import Insights from "./pages/Insights"
 import Settings from "./pages/Settings"
+import Help from "./pages/Help"
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/investments" element={<Investments />} />
         <Route path="/inbox" element={<Inbox />} />
         <Route path="/insights" element={<Insights />} />
+        <Route path="/help" element={<Help />} />
         <Route path="/settings" element={<Settings />} />
       </Routes>
     </div>

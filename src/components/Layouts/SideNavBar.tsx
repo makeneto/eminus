@@ -3,13 +3,13 @@ import {
   ChartNoAxesCombined,
   CreditCard,
   Leaf,
-  // Lightbulb,
+  Lightbulb,
   Mail,
   TrendingUp,
 } from "lucide-react"
 import { NavLink } from "react-router-dom"
 import NavLogo from "../sideNavbar/NavLogo"
-import Profile from "../header/Profile"
+import OthersOptions from "./OthersOptions"
 
 export default function SideNavBar() {
   return (
@@ -20,7 +20,7 @@ export default function SideNavBar() {
         <NavLink
           to="/"
           prefetch="intent"
-          className={({ isActive }) => (isActive ? "active" : "")}
+          className={({ isActive }) => (isActive ? "activeLink--default" : "")}
         >
           <ChartNoAxesCombined />
           Dashboard
@@ -28,7 +28,7 @@ export default function SideNavBar() {
         <NavLink
           to="/payments"
           prefetch="intent"
-          className={({ isActive }) => (isActive ? "active" : "")}
+          className={({ isActive }) => (isActive ? "activeLink--default" : "")}
         >
           <CreditCard />
           Payments
@@ -36,7 +36,7 @@ export default function SideNavBar() {
         <NavLink
           to="/transactions"
           prefetch="intent"
-          className={({ isActive }) => (isActive ? "active" : "")}
+          className={({ isActive }) => (isActive ? "activeLink--default" : "")}
         >
           <ArrowLeftRight />
           Transactions
@@ -44,7 +44,7 @@ export default function SideNavBar() {
         <NavLink
           to="/plans"
           prefetch="intent"
-          className={({ isActive }) => (isActive ? "active" : "")}
+          className={({ isActive }) => (isActive ? "activeLink--default" : "")}
         >
           <Leaf />
           Saving Plans
@@ -52,7 +52,7 @@ export default function SideNavBar() {
         <NavLink
           to="/investments"
           prefetch="intent"
-          className={({ isActive }) => (isActive ? "active" : "")}
+          className={({ isActive }) => (isActive ? "activeLink--default" : "")}
         >
           <TrendingUp />
           Investments
@@ -60,22 +60,22 @@ export default function SideNavBar() {
         <NavLink
           to="/inbox"
           prefetch="intent"
-          className={({ isActive }) => (isActive ? "active" : "")}
+          className={({ isActive }) => (isActive ? "activeLink--default" : "")}
         >
           <Mail />
           Inbox
         </NavLink>
-        {/* <NavLink
+        <NavLink
           to="/insights"
           prefetch="intent"
-          className={({ isActive }) => (isActive ? "active" : "")}
+          className={({ isActive }) => (isActive ? "activeLink--default" : "")}
         >
           <Lightbulb />
           Insights
-        </NavLink> */}
+        </NavLink>
       </nav>
 
-      <Profile />
+      <OthersOptions />
     </aside>
   )
 }
