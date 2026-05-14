@@ -41,17 +41,6 @@
 
                         transition: all .1s ease-in;
 
-                        &:first-child {
-                              background-color: v.$dark-green;
-                              color: white;
-
-                              &:hover {
-                                    background-color: transparent;
-                                    color: v.$dark-green;
-                                    border: v.$lightGreyBorder;
-                              }
-                        }
-
                         &:last-child {
                               background-color: v.$light-green;
                               border: v.$lightGreenBorder;

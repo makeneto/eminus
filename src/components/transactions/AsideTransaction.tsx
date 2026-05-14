@@ -1,8 +1,8 @@
-import { ChartPieDonutText } from "./ChartPieDonutText"
+import { ChartPieDonutText } from "../dashboard/ChartPieDonutText"
 import Frame from "../ui/Frame"
 import FrameHeader from "../ui/FrameHeader"
 import SelectFilter from "../ui/SelectFilter"
-import { RecentActivity } from "./RecentActivity"
+import { RecentActivity } from "../dashboard/RecentActivity"
 
 export default function AsideTransaction({
   recentTransactions,

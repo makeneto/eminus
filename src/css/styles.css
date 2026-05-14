@@ -729,15 +729,6 @@ button:disabled {
   font-weight: 500;
   transition: all 0.1s ease-in;
 }
-.transactions__aside--resumeButtons button:first-child {
-  background-color: #023535;
-  color: white;
-}
-.transactions__aside--resumeButtons button:first-child:hover {
-  background-color: transparent;
-  color: #023535;
-  border: 0.1rem solid #e2ebeb;
-}
 .transactions__aside--resumeButtons button:last-child {
   background-color: #eef8ef;
   border: 0.1rem solid rgba(143, 209, 125, 0.3294117647);

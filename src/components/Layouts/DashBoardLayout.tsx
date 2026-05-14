@@ -1,5 +1,5 @@
 import CardSection from "../cardSection/CardSection"
-import AsideTransaction from "../dashboard/AsideTransaction"
+import AsideTransaction from "../transactions/AsideTransaction"
 import DashCashFlow from "../dashboard/CashflowSection"
 import DashSummary from "../dashboard/DashSummary"
 import RecentTransactionTable from "../dashboard/RecentTransactionTable"
