@@ -1,4 +1,4 @@
-import { useMemo } from "react"
+import React, { useMemo } from "react"
 import Frame from "../ui/Frame"
 import SettingButton from "../ui/SettingButton"
 import ProgressBar from "../ui/ProgressBar"
@@ -46,7 +46,7 @@ export default function SinglePlan({
       }}
     >
       {isMain ? (
-        <>
+        <React.Fragment>
           {/* MAIN */}
           <div className="relative flex items-center justify-between w-full ">
             <div className="flex items-center gap-2">
@@ -78,9 +78,9 @@ export default function SinglePlan({
           </div>
 
           <ProgressBar value={process} />
-        </>
+        </React.Fragment>
       ) : (
-        <>
+        <React.Fragment>
           {/* SECONDARY */}
           <div className="flex justify-between items-center">
             <p className="text-sm font-medium">{title}</p>
@@ -104,7 +104,7 @@ export default function SinglePlan({
               </p>
             </div>
           </div>
-        </>
+        </React.Fragment>
       )}
     </Frame>
   )
