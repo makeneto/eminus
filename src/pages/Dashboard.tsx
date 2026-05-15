@@ -9,7 +9,7 @@ export default function Dashboard() {
 
   return (
     <React.Fragment>
-      <Header title={greeting} />
+      <Header title="Testee" />
       <DashboardLayout />
     </React.Fragment>
   )
