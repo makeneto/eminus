@@ -388,7 +388,9 @@ button:disabled {
 }
 
 .sideNavBar {
-  padding: 1.5rem 1rem 1rem;
+  background-color: white;
+  border-right: 0.1rem solid #e2ebeb;
+  padding: 1.8rem 1rem 1rem;
 }
 .sideNavBar, .sideNavBar nav {
   flex: 1;
@@ -417,13 +419,30 @@ button:disabled {
   background-color: #b0ff9b;
 }
 
-.navLogo {
-  margin-bottom: 2rem;
-  margin-inline: 1rem;
+.assistantLinks {
+  border-top: 0.1rem solid #e2ebeb;
+  margin-top: 0.4rem;
+  padding-top: 1rem;
 }
-.navLogo img {
+
+.navHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  margin-inline: 0.4rem;
+}
+.navHeader img {
   width: auto;
   height: 1.6rem;
+}
+.navHeader .sideBar {
+  background-color: rgb(188, 188, 188);
+}
+.navHeader .sideBar svg {
+  padding: 0.4rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .otherLink {
@@ -514,7 +533,7 @@ button:disabled {
 
 .layout {
   display: grid;
-  grid-template-columns: 12rem auto;
+  grid-template-columns: 14rem auto;
   grid-template-rows: 100vh;
   height: 100vh;
   overflow: hidden;

@@ -5,16 +5,18 @@ import {
   Leaf,
   Lightbulb,
   Mail,
+  MessageCircleQuestionMark,
   TrendingUp,
 } from "lucide-react"
 import { NavLink } from "react-router-dom"
-import NavLogo from "../sideNavbar/NavLogo"
+
 import OthersOptions from "./OthersOptions"
+import NavHeader from "../sideNavbar/NavHeader"
 
 export default function SideNavBar() {
   return (
     <aside className="sideNavBar">
-      <NavLogo />
+      <NavHeader />
 
       <nav>
         <NavLink
@@ -73,6 +75,19 @@ export default function SideNavBar() {
           <Lightbulb />
           Insights
         </NavLink>
+
+        <section className="assistantLinks">
+          <NavLink
+            to="/help"
+            prefetch="intent"
+            className={({ isActive }) =>
+              isActive ? "activeLink--default" : ""
+            }
+          >
+            <MessageCircleQuestionMark />
+            Help Center
+          </NavLink>
+        </section>
       </nav>
 
       <OthersOptions />

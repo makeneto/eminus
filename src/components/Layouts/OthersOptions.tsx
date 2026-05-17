@@ -1,4 +1,4 @@
-import { LogOut, MessageCircleQuestionMark, Settings } from "lucide-react"
+import { LogOut, Settings } from "lucide-react"
 import OtherLinks from "../sideNavbar/OtherLinks"
 
 export default function OthersOptions() {
@@ -7,11 +7,6 @@ export default function OthersOptions() {
       <h1 className="uppercase text-[0.75rem] text-muted-foreground">Others</h1>
 
       <div className="otherLink__list">
-        <OtherLinks
-          icon={<MessageCircleQuestionMark size={20} />}
-          title="Help Center"
-          link="/help"
-        />
         <OtherLinks
           icon={<Settings size={20} />}
           title="Settings"
