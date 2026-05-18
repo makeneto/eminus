@@ -436,13 +436,17 @@ button:disabled {
   width: auto;
   height: 1.6rem;
 }
-.navHeader .sideBar {
-  background-color: rgb(188, 188, 188);
+.navHeader--sideBar {
+  padding: 0.3rem;
+  border-radius: 0.4rem;
+  transition: background 0.1s ease-in;
 }
-.navHeader .sideBar svg {
-  padding: 0.4rem;
-  width: 1rem;
-  height: 1rem;
+.navHeader--sideBar svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+.navHeader--sideBar:hover {
+  background-color: rgba(188, 188, 188, 0.218);
 }
 
 .otherLink {
@@ -533,7 +537,7 @@ button:disabled {
 
 .layout {
   display: grid;
-  grid-template-columns: 14rem auto;
+  grid-template-columns: 13rem auto;
   grid-template-rows: 100vh;
   height: 100vh;
   overflow: hidden;

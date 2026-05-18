@@ -7,9 +7,9 @@ export default function NavHeader() {
       <NavLink to="/">
         <img src="/eminus-full-logo.svg" alt="Eminus Logo" />
       </NavLink>
-      <div className="navHeader--sideBar">
+      <button className="navHeader--sideBar">
         <Sidebar />
-      </div>
+      </button>
     </header>
   )
 }
