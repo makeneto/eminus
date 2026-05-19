@@ -526,7 +526,7 @@ button:disabled {
   justify-content: space-between;
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: rgb(143, 49, 49);
   z-index: 10;
   padding-bottom: 2rem;
 }
