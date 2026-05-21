@@ -36,6 +36,23 @@ button:disabled {
 .btn--primary:hover {
   background-color: #044e4e;
 }
+.btn--secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.87rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+.btn--secondary:hover {
+  background-color: #eef8ef;
+}
+.btn--secondary svg {
+  width: 15px;
+  height: auto;
+}
 .btn--simple svg {
   transition: color 0.1s ease-in;
 }
@@ -533,6 +550,62 @@ button:disabled {
 .headerPage h1 {
   font-weight: 600;
   font-size: 1.1rem;
+}
+
+.invest {
+  display: grid;
+  gap: 0.98rem;
+}
+.invest__header--frame {
+  padding: 1.5rem;
+}
+.invest__header--layout {
+  display: flex;
+  justify-content: space-between;
+}
+.invest__header--content {
+  display: grid;
+  gap: 3.3rem;
+}
+.invest__header--tradingUp {
+  color: #16a34a;
+}
+.invest__header--chartMultiple {
+  display: grid;
+  gap: 2rem;
+  width: 50%;
+}
+.invest__content {
+  display: grid;
+  grid-template-columns: 65% auto;
+  gap: 0.98rem;
+}
+.invest__content--companies {
+  display: grid;
+  gap: 0.98rem;
+}
+.invest__companies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.98rem;
+}
+.invest__companies__item {
+  display: grid;
+  gap: 1.3rem;
+  border: 0.1rem solid #e2ebeb;
+  padding: 0.8rem;
+  border-radius: 0.7rem;
+}
+.invest__companies__item--logo {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.invest--feats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.98rem;
 }
 
 .layout {

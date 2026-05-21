@@ -19,6 +19,26 @@
             }
       }
 
+      &--secondary {
+            display: flex;
+            align-items: center;
+            gap: .3rem;            
+            font-size: .87rem;
+            padding: .2rem .6rem;
+            border-radius: .5rem;
+            transition: all .2s ease;
+            font-weight: 500;
+
+            &:hover {
+                  background-color: v.$light-green;
+            }
+
+            & svg {
+                  width: 15px;
+                  height: auto;
+            }
+      }
+
       &--simple {
             & svg {
                   transition: color .1s ease-in;

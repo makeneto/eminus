@@ -1,0 +1,73 @@
+@use "../base/variables" as v;
+
+.invest {
+      display: grid;
+      gap: v.$spacing;
+
+      &__header {
+
+            &--frame {
+                  padding: 1.5rem;
+            }
+
+            &--layout {
+                  display: flex;
+                  justify-content: space-between;
+            }
+
+            &--content {
+                  display: grid;
+                  gap: 3.3rem;
+            }
+
+            &--tradingUp {
+                  color: v.$completed-color;
+            }
+
+            &--chartMultiple {
+                  display: grid;
+                  gap: 2rem;
+                  width: 50%;
+            }
+      }
+
+      &__content {
+            display: grid;
+            grid-template-columns: 65% auto;
+            gap: v.$spacing;
+
+            &--companies {
+                  display: grid;
+                  gap: v.$spacing;
+            }
+      }
+
+      &__companies {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: v.$spacing;
+
+
+            &__item {
+                  display: grid;
+                  gap: 1.3rem;
+                  border: v.$lightGreyBorder;
+                  padding: .8rem;
+                  border-radius: .7rem;
+
+                  &--logo {
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 50%;
+                        overflow: hidden;
+                  }
+            }
+      }
+
+      &--feats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: v.$spacing;
+            
+      }
+}
