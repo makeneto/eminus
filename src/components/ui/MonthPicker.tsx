@@ -99,7 +99,7 @@ export function MonthPicker({ value, onChange, className }: MonthPickerProps) {
                 size="sm"
                 className={cn(
                   "h-8 text-xs font-medium rounded-md",
-                  isSelected && "bg-[#023535] text-primary-foreground",
+                  isSelected && "bg-[#9ae287] text-[#023535]",
                 )}
                 onClick={() => handleSelect(i)}
               >
