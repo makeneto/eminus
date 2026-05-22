@@ -25,19 +25,23 @@ export default function InvestmentsHeader() {
               <p className="flex items-center gap-1 text-muted-foreground">
                 Total Companies <ArrowUpRight size={15} />
               </p>
-              <h2 className="text-2xl font-bold">3</h2>
+              <h2 className="text-xl font-bold">3</h2>
             </div>
             <div className="grid gap-1">
               <p className="flex items-center gap-1 text-muted-foreground">
                 Cash Balance <ArrowUpRight size={15} />
               </p>
-              <h2 className="text-2xl font-bold">136 780 Kz</h2>
+              <h2 className="text-xl font-bold">
+                136 780 <span className="currency">Kz</span>
+              </h2>
             </div>
             <div className="grid gap-1">
               <p className="flex items-center gap-1 text-muted-foreground">
-                Total Companies <ArrowUpRight size={15} />
+                Committed Cash <ArrowUpRight size={15} />
               </p>
-              <h2 className="text-2xl font-bold">136 780 Kz</h2>
+              <h2 className="text-xl font-bold">
+                1 780 <span className="currency">Kz</span>
+              </h2>
             </div>
           </div>
         </div>
