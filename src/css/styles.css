@@ -12,6 +12,10 @@ button:disabled {
   cursor: not-allowed;
 }
 
+.currency {
+  color: rgb(175, 175, 178) !important;
+}
+
 .badge {
   width: fit-content;
 }
@@ -586,8 +590,9 @@ button:disabled {
 }
 .invest__companies {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 0.98rem;
+  margin-bottom: 1rem;
 }
 .invest__companies__item {
   display: grid;
