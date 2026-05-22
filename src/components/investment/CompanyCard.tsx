@@ -2,17 +2,18 @@ import { TrendingUp, EllipsisVertical } from "lucide-react"
 
 import { Button } from "../ui/button"
 
-interface CompanyProps {
+export interface CompanyProps {
   id: string
   logo: string
   name: string
   currentBalance: number
+  investedBalance: number
   qtd: number
   percent: number
   percentValue: number
 }
 
-interface CompanyCardProps {
+export interface CompanyCardProps {
   company: CompanyProps
 }
 
