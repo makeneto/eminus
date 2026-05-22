@@ -1,8 +1,9 @@
 import { FileOutput } from "lucide-react"
-import AsideTransaction from "../transactions/AsideTransaction"
-import TransactionSection from "../transactions/transactionSection"
-import TransactionSummary from "../transactions/TransactionSummary"
+
 import { MonthPicker } from "../ui/MonthPicker"
+import AsideTransaction from "../transactions/AsideTransaction"
+import TransactionSummary from "../transactions/TransactionSummary"
+import TransactionSection from "../transactions/TransactionSection"
 
 export default function TransactionsLayout() {
   return (
@@ -15,7 +16,7 @@ export default function TransactionsLayout() {
       <div className="transactions__aside">
         <div className="transactions__aside--resumeButtons">
           <MonthPicker
-            value={{ month: 1, year: 2025 }} // February 2025
+            value={{ month: 1, year: 2025 }}
             onChange={(val) => console.log(val)}
           />
           <button>
