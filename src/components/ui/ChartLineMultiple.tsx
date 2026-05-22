@@ -10,33 +10,38 @@ import {
   type ChartConfig,
 } from "@/components/ui/chart"
 
-export const description = "A multiple line chart"
-
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
-  { month: "July", desktop: 186, mobile: 80 },
-  { month: "August", desktop: 305, mobile: 200 },
-  { month: "September", desktop: 237, mobile: 120 },
-  { month: "October", desktop: 73, mobile: 190 },
-  { month: "November", desktop: 209, mobile: 130 },
-  { month: "December", desktop: 186, mobile: 80 },
+  { month: "January", yango: 186000, marmitas: 80000 },
+  { month: "February", yango: 305000, marmitas: 200000 },
+  { month: "March", yango: 237000, marmitas: 120000 },
+  { month: "April", yango: 73000, marmitas: 190000 },
+  { month: "May", yango: 209000, marmitas: 130000 },
+  { month: "June", yango: 214000, marmitas: 140000 },
+  { month: "July", yango: 186000, marmitas: 80000 },
+  { month: "August", yango: 305000, marmitas: 200000 },
+  { month: "September", yango: 237000, marmitas: 120000 },
+  { month: "October", yango: 73000, marmitas: 190000 },
+  { month: "November", yango: 209000, marmitas: 130000 },
+  { month: "December", yango: 186000, marmitas: 80000 },
 ]
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  yango: {
+    label: "Yango",
     color: "var(--chart-1)",
   },
-  mobile: {
-    label: "Mobile",
+  marmitas: {
+    label: "Marmitas",
     color: "var(--chart-2)",
   },
 } satisfies ChartConfig
+
+const currentMonthIndex = chartData.findIndex(
+  (item) =>
+    item.month === new Date().toLocaleString("en-US", { month: "long" }),
+)
+
+const defaultIndex = currentMonthIndex !== -1 ? currentMonthIndex : 0
 
 export function ChartLineMultiple() {
   return (
@@ -45,10 +50,7 @@ export function ChartLineMultiple() {
         <LineChart
           accessibilityLayer
           data={chartData}
-          margin={{
-            left: 12,
-            right: 12,
-          }}
+          margin={{ left: 12, right: 12 }}
         >
           <CartesianGrid vertical={false} />
           <XAxis
@@ -58,18 +60,22 @@ export function ChartLineMultiple() {
             tickMargin={8}
             tickFormatter={(value) => value.slice(0, 3)}
           />
-          <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
+          <ChartTooltip
+            cursor={false}
+            content={<ChartTooltipContent />}
+            defaultIndex={defaultIndex}
+          />
           <Line
-            dataKey="desktop"
+            dataKey="yango"
             type="monotone"
-            stroke="var(--color-desktop)"
+            stroke="var(--color-yango)"
             strokeWidth={2}
             dot={false}
           />
           <Line
-            dataKey="mobile"
+            dataKey="marmitas"
             type="monotone"
-            stroke="var(--color-mobile)"
+            stroke="var(--color-marmitas)"
             strokeWidth={2}
             dot={false}
           />
