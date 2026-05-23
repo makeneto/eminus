@@ -1,9 +1,8 @@
-import Frame from "../ui/Frame"
-import FrameHeader from "../ui/FrameHeader"
-import SelectFilter from "../ui/SelectFilter"
-
 import { CompanyList } from "./CompanyList"
-import InvestmentsList from "./InvestmentsList"
+import GoalCompany from "./CompanyGoal"
+import RecentActivity from "./RecentActivity"
+import ReturnPerCompany from "./ReturnPerCompany"
+import TopPerformer from "./TopPerformer"
 
 export default function InvestmentsContent() {
   return (
@@ -11,33 +10,16 @@ export default function InvestmentsContent() {
       <section className="invest__content--companies">
         <CompanyList />
 
-        <div className="invest--feats">
-          <Frame>
-            <FrameHeader title="Return per company">
-              <span className="text-sm text-zinc-500">
-                vs. Invested capital
-              </span>
-            </FrameHeader>
-
-            <InvestmentsList />
-          </Frame>
-
-          <Frame>
-            <FrameHeader title="Investment Goal">
-              <SelectFilter group={["Yango Cars", "Marmitas", "Goldera"]} />
-            </FrameHeader>
-          </Frame>
+        <div className="invest__feats">
+          <ReturnPerCompany />
+          <TopPerformer />
+          <GoalCompany />
         </div>
       </section>
 
       <section>
-        <Frame>
-          <FrameHeader title="Recent Activity" />
-        </Frame>
-
-        <Frame>
-          <FrameHeader title="Top Performer" />
-        </Frame>
+        <RecentActivity />
+        <TopPerformer />
       </section>
     </main>
   )
