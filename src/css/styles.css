@@ -541,6 +541,193 @@ button:disabled {
   gap: 0.98rem;
 }
 
+.goal-summary {
+  background-color: #eef8ef;
+  padding: 0.98rem;
+  border: 0.1rem solid rgba(143, 209, 125, 0.3294117647);
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+  display: grid;
+  gap: 1.25rem;
+}
+.goal-summary__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.goal-summary__company {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.goal-summary__logo {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.goal-summary__amount {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.goal-summary__name {
+  font-size: 0.75rem;
+}
+.goal-summary__status {
+  text-align: right;
+}
+.goal-summary__percent {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.goal-summary__label {
+  font-size: 0.75rem;
+}
+.goal-summary__progress {
+  display: grid;
+  gap: 0.5rem;
+}
+.goal-summary__progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.goal-summary__progress-labels span:last-child {
+  color: #6b7280;
+}
+
+.goal-milestones {
+  margin-top: 1rem;
+}
+.goal-milestones__title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.milestone-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.milestone-timeline__line {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  bottom: 20px;
+  width: 1px;
+  background-color: #e5e7eb;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.milestone-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+.milestone-item__icon {
+  flex-shrink: 0;
+  z-index: 1;
+}
+.milestone-item__card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.75rem;
+}
+.milestone-item__card--completed {
+  background-color: #f6fcf7;
+  border: 1px solid #defae8;
+}
+.milestone-item__card--in-process {
+  background-color: #fff;
+  border: 1px solid #defae8;
+  border-color: #f3f4f6;
+}
+.milestone-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+.milestone-item__title {
+  font-weight: 600;
+  color: #1f2937;
+}
+.milestone-item__subtitle {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.check-icon {
+  width: 40px;
+  height: 40px;
+  border: 0.1rem solid rgba(143, 209, 125, 0.3294117647);
+  border-radius: 50%;
+  background-color: #f6fcf7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.check-icon svg {
+  stroke: #15803d;
+}
+
+.circle-progress {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+.circle-progress svg {
+  transform: rotate(-90deg);
+}
+.circle-progress__track {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 3.5;
+}
+.circle-progress__fill {
+  fill: none;
+  stroke: #f59e0b;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.4s ease;
+}
+.circle-progress__label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #92400e;
+  line-height: 1;
+}
+
+.milestone-badge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+.milestone-badge--completed {
+  background-color: #defae8;
+  color: #15803d;
+}
+.milestone-badge--in-process {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
 .headerPage {
   display: flex;
   align-items: center;
@@ -581,7 +768,7 @@ button:disabled {
 }
 .invest__content {
   display: grid;
-  grid-template-columns: 65% auto;
+  grid-template-columns: 71% auto;
   gap: 0.98rem;
 }
 .invest__content--companies {
@@ -590,7 +777,7 @@ button:disabled {
 }
 .invest__companies {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.98rem;
   margin-bottom: 1rem;
 }
@@ -607,10 +794,59 @@ button:disabled {
   border-radius: 50%;
   overflow: hidden;
 }
-.invest--feats {
+.invest__feats {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 33% 32% auto;
   gap: 0.98rem;
+}
+.invest__feats--card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding-bottom: 7rem;
+}
+.invest__list {
+  height: 15rem;
+  overflow-y: auto;
+  padding-right: 0.4rem;
+}
+.invest__list::-webkit-scrollbar {
+  display: none;
+}
+.invest__list {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.invest__summary {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  border: 0.1rem solid #e2ebeb;
+  background-color: rgb(246, 246, 246);
+  border-radius: 0.8rem;
+}
+.invest__topPerformer {
+  display: grid;
+  gap: 1rem;
+}
+.invest__topPerformer li:first-child {
+  background-color: #eef8ef;
+  border: 0.1rem solid rgba(143, 209, 125, 0.3294117647);
+}
+.invest__topPerformer li:not(:first-child) {
+  border: 0.1rem solid #e2ebeb;
+}
+.invest__topPerformer--topCompany {
+  border-radius: 0.8rem;
+  padding: 0.98rem;
+}
+.invest__goal {
+  background-color: #eef8ef;
+  border: 0.1rem solid rgba(143, 209, 125, 0.3294117647);
+  border-radius: 0.8rem;
+  padding: 0.98rem;
 }
 
 .layout {

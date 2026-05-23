@@ -1,7 +1,8 @@
-interface CompaniesProps {
+export interface CompanyProps {
   id: string
   logo: string
   name: string
+  industry: string
   qtd: number
   percent: number
   percentValue: number
@@ -9,11 +10,12 @@ interface CompaniesProps {
   currentBalance: number
 }
 
-export const companies: CompaniesProps[] = [
+export const companies: CompanyProps[] = [
   {
     id: "company-001",
     logo: "/yango-logo.png",
     name: "Yango Cars",
+    industry: "Transportation",
     currentBalance: 960000,
     qtd: 2,
     percent: 5.6,
@@ -24,6 +26,7 @@ export const companies: CompaniesProps[] = [
     id: "company-002",
     logo: "/profile.jpeg",
     name: "Marmitas",
+    industry: "Food Service",
     currentBalance: 445000,
     qtd: 1,
     percent: 2,
@@ -34,6 +37,7 @@ export const companies: CompaniesProps[] = [
     id: "company-003",
     logo: "/eminus-dark-logo.svg",
     name: "Goldera",
+    industry: "Gold Trading",
     currentBalance: 960000,
     qtd: 2,
     percent: 1.6,

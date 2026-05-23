@@ -5,26 +5,27 @@
 @use './components/ui/badge';
 @use './components/ui/buttons';
 @use './components/ui/frame';
-@use './components/ui/progressBar';
-@use './components/ui/settingButton';
+@use './components/ui/progress-bar';
+@use './components/ui/setting-button';
 @use './components/ui/table';
 
-@use './components/cardControls';
-@use './components/cardSection';
-@use './components/creditCard';
-@use './components/dailyLimit';
+@use './components/card-controls';
+@use './components/card-section';
+@use './components/credit-card';
+@use './components/daily-limit';
 @use './components/dashboard';
 @use './components/profile';
-@use './components/sideNavbar';
+@use './components/side-navbar';
 
-@use './layouts/asideTransactions';
-@use './layouts/dashboardLay';
+@use './layouts/aside-transactions';
+@use './layouts/dashboard-lay';
+@use './layouts/goal-company';
 @use './layouts/header';
-@use './layouts/investmentLay';
+@use './layouts/investment-lay';
 @use './layouts/layout';
-@use './layouts/pagesLay';
-@use './layouts/paymentsLay';
-@use './layouts/plansLay';
-@use './layouts/transactionsLay';
+@use './layouts/pages-lay';
+@use './layouts/payments-lay';
+@use './layouts/plans-lay';
+@use './layouts/transactions-lay';
 
 @use './utils/no-scrollBar';
