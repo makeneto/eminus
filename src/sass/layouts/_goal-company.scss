@@ -1,0 +1,233 @@
+@use "../base/variables" as v;
+
+$green-50: #f6fcf7;
+$green-100: #defae8;
+$green-700: #15803d;
+
+$amber-100: #fef3c7;
+$amber-700: #b45309;
+$amber-800: #92400e;
+$amber-stroke: #f59e0b;
+
+$gray-100: #f3f4f6;
+$gray-200: #e5e7eb;
+$gray-500: #6b7280;
+$gray-800: #1f2937;
+
+$border-radius: 0.75rem;
+$icon-size: 40px;
+$line-left: calc($icon-size / 2);
+
+.goal-summary {
+      background-color: v.$light-green;
+      padding: v.$spacing;
+      border: v.$lightGreenBorder;
+      border-radius: 1rem;
+      margin-top: 0.5rem;
+      display: grid;
+      gap: 1.25rem;
+
+      &__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+      }
+
+      &__company {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+      }
+
+      &__logo {
+            width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 50%;
+            object-fit: cover;
+      }
+
+      &__amount {
+            font-size: 0.875rem;
+            font-weight: 700;
+      }
+
+      &__name {
+            font-size: 0.75rem;
+      }
+
+      &__status {
+            text-align: right;
+      }
+
+      &__percent {
+            font-size: 0.875rem;
+            font-weight: 500;
+      }
+
+      &__label {
+            font-size: 0.75rem;
+      }
+
+      &__progress {
+            display: grid;
+            gap: 0.5rem;
+      }
+
+      &__progress-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            font-weight: 500;
+
+            span:last-child {
+                  color: $gray-500;
+            }
+      }
+}
+
+.goal-milestones {
+      margin-top: 1rem;
+
+      &__title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+      }
+}
+
+.milestone-timeline {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+
+      &__line {
+            position: absolute;
+            left: $line-left;
+            top: $icon-size * 0.5;
+            bottom: $icon-size * 0.5;
+            width: 1px;
+            background-color: $gray-200;
+            transform: translateX(-50%);
+            pointer-events: none;
+      }
+}
+
+.milestone-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      position: relative;
+
+      &__icon {
+            flex-shrink: 0;
+            z-index: 1;
+      }
+
+      &__card {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.625rem 0.75rem;
+            border-radius: $border-radius;
+
+            &--completed {
+                  background-color: $green-50;
+                  border: 1px solid $green-100;
+            }
+
+            &--in-process {
+                  background-color: #fff;
+                  border: 1px solid $green-100;
+                  border-color: $gray-100;
+            }
+      }
+
+      &__info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.125rem;
+      }
+
+      &__title {
+            font-weight: 600;
+            color: $gray-800;
+      }
+
+      &__subtitle {
+            font-size: 0.75rem;
+            color: $gray-500;
+      }
+}
+
+.check-icon {
+      width: $icon-size;
+      height: $icon-size;
+      border: v.$lightGreenBorder;
+      border-radius: 50%;
+      background-color: $green-50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      & svg {
+            stroke: $green-700;
+      }
+}
+
+.circle-progress {
+      position: relative;
+      width:  50px;
+      height: 50px;
+      flex-shrink: 0;
+
+      svg {
+            transform: rotate(-90deg);
+      }
+
+      &__track {
+            fill: none;
+            stroke: $gray-200;
+            stroke-width: 3.5;
+      }
+
+      &__fill {
+            fill: none;
+            stroke: $amber-stroke;
+            stroke-width: 3.5;
+            stroke-linecap: round;
+            transition: stroke-dashoffset 0.4s ease;
+      }
+
+      &__label {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 700;
+            color: $amber-800;
+            line-height: 1;
+      }
+}
+
+.milestone-badge {
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 0.25rem 0.625rem;
+      border-radius: 9999px;
+      white-space: nowrap;
+
+      &--completed {
+            background-color: $green-100;
+            color: $green-700;
+      }
+
+      &--in-process {
+            background-color: $amber-100;
+            color: $amber-700;
+      }
+}

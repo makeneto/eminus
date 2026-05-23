@@ -1,0 +1,132 @@
+@use "../base/variables" as v;
+
+.invest {
+      display: grid;
+      gap: v.$spacing;
+
+      &__header {
+            &--frame {
+                  padding: 1.5rem;
+            }
+
+            &--layout {
+                  display: flex;
+                  justify-content: space-between;
+            }
+
+            &--content {
+                  display: grid;
+                  gap: 3.3rem;
+            }
+
+            &--tradingUp {
+                  color: v.$completed-color;
+            }
+
+            &--chartMultiple {
+                  display: grid;
+                  gap: 2rem;
+                  width: 50%;
+            }
+      }
+
+      &__content {
+            display: grid;
+            grid-template-columns: 71% auto;
+            gap: v.$spacing;
+
+            &--companies {
+                  display: grid;
+                  gap: v.$spacing;
+            }
+      }
+
+      &__companies {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: v.$spacing;
+            margin-bottom: 1rem;
+
+            &__item {
+                  display: grid;
+                  gap: 1.3rem;
+                  border: v.$lightGreyBorder;
+                  padding: .8rem;
+                  border-radius: .7rem;
+
+                  &--logo {
+                        width: 2rem;
+                        height: 2rem;
+                        border-radius: 50%;
+                        overflow: hidden;
+                  }
+            }
+      }
+
+      &__feats {
+            display: grid;
+            grid-template-columns: 33% 32% auto;
+            gap: v.$spacing;
+
+            &--card {
+                  position: relative;
+
+                  display: flex;
+                  flex-direction: column;
+
+                  min-height: 100%;
+                  padding-bottom: 7rem;
+            }
+      }
+
+      &__list {
+            height: 15rem;
+            overflow-y: auto;
+            padding-right: .4rem;
+
+            &::-webkit-scrollbar {
+                  display: none;
+            }
+            
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+      }
+
+      &__summary {
+            position: absolute;
+
+            left: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+
+            border: v.$lightGreyBorder;
+            background-color: rgb(246, 246, 246);
+            border-radius: .8rem;
+      }
+
+      &__topPerformer {
+            display: grid;
+            gap: 1rem;
+
+            & li:first-child {
+                  background-color: v.$light-green;
+                  border: v.$lightGreenBorder;
+            }
+
+            & li:not(:first-child) {
+                  border: v.$lightGreyBorder;
+            }
+
+            &--topCompany {
+                  border-radius: .8rem;
+                  padding: v.$spacing;
+            }
+      }
+
+      &__goal {
+            background-color: v.$light-green;
+            border: v.$lightGreenBorder;
+            border-radius: .8rem;
+            padding: v.$spacing;
+      }
+}
