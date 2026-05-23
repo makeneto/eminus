@@ -18,10 +18,10 @@ export default function InvestmentItem({ company }: CompanyCardProps) {
 
       <div className="flex items-center justify-between">
         <p className="text-xs font-medium">
-          Invested: {investedBalance.toLocaleString()} kz
+          Current: {currentBalance.toLocaleString()} kz
         </p>
         <p className="text-xs font-medium text-muted-foreground">
-          Current: {currentBalance.toLocaleString()} kz
+          Invested: {investedBalance.toLocaleString()} kz
         </p>
       </div>
     </div>
