@@ -18,8 +18,9 @@ const chartData = [
   { month: "January", income: 186000, expense: 80000 },
   { month: "February", income: 305000, expense: 200000 },
   { month: "March", income: 237000, expense: 120000 },
-  { month: "April", income: 73000, expense: 190000 },
+  { month: "April", income: 830000, expense: 190000 },
   { month: "May", income: 209000, expense: 130000 },
+  { month: "June", income: 590000, expense: 110000  },
 ]
 
 const chartConfig = {
