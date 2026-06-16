@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+# 📊 Eminus
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern family finance dashboard that helps households track expenses, manage budgets, and achieve financial clarity.
 
-Currently, two official plugins are available:
+### 📷 Gallery
+<img width="500" height="auto" alt="Image" src="https://github.com/user-attachments/assets/9f299990-7192-456c-8fef-13f6cec0431a" />
+<img width="500" height="auto" alt="Image" src="https://github.com/user-attachments/assets/70efb834-6878-4d06-b035-216dc9d0e764" />
+<img width="1005" height="auto" alt="Image" src="https://github.com/user-attachments/assets/4e73bbf8-2c8d-41a1-ab72-e757652357a5" />
+<img width="500" height="auto" alt="Image" src="https://github.com/user-attachments/assets/3ff19748-c7af-48c7-93a5-6a0f1c294a46" />
+<img width="500" height="auto" alt="Image" src="https://github.com/user-attachments/assets/cb18e3f0-958c-4ca8-b93e-7500f616a8ea" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+### 🚀 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Eminus** is a family-focused financial management platform designed to bring clarity, control, and accountability to everyday money decisions.
 
-## Expanding the ESLint configuration
+It allows users to:
+- Track income and expenses in real time
+- Monitor financial goals and savings plans
+- Analyze spending habits through visual insights
+- Manage cards, payments, and transactions in one place
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🎯 Problem
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Most financial tools are either:
+- Too complex for families
+- Or too simplistic for real financial planning
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Eminus bridges that gap by combining **clarity + structure + usability** in one dashboard.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### ✨ Features
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- 📊 Interactive financial dashboard
+- 💳 Cards & payments management
+- 📈 Cashflow analytics
+- 🎯 Savings goals tracking
+- 🧾 Transaction history with status tracking
+- 📉 Spending breakdown by category
+- 🔔 Activity & insights feed
+
+---
+
+### 🧠 Design Philosophy
+
+Eminus is built around 3 principles:
+- Clarity over complexity
+- Structure over chaos
+- Progress over guesswork
+
+---
+
+### 🖥️ Tech Stack
+
+- React
+- TypeScript
+- Tailwind CSS
+- Shadcn/ui
+- Charting library (Recharts or similar)
+- Component-based architecture
+
+---
+
+### 💡 Vision
+
+Eminus is not just a dashboard — it’s a system that helps families stop reacting to money and start controlling it intentionally.
